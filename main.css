@@ -1,0 +1,13 @@
+/* baseline */
+@import 'styles/baseline.css';
+
+/* components */
+@import 'styles/components/controlpanel.css';
+@import 'styles/components/boat.css';
+@import 'styles/components/fish.css';
+
+/* weather states */
+@import 'styles/states/freezing.css';
+@import 'styles/states/rainy.css';
+@import 'styles/states/sunny.css';
+@import 'styles/states/thunder.css';
