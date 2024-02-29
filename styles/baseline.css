@@ -9,17 +9,6 @@
     --transition-base: 0.5s ease-out;
 }
 
-.sr-only {
-    clip: rect(0, 0, 0, 0);
-    position: absolute;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
 h1,
 h2,
 h3,
