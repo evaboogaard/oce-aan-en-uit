@@ -1,52 +1,359 @@
 main nav {
-    position: fixed;
-    left: 0;
-    height: 80vh;
-    top: 10vh;
+  position: fixed;
+  left: 0;
+  height: 80vh;
+  bottom: 10vh;
 
+  h1 {
+    opacity: 0;
+  }
+
+  @media (min-width: 800px) {
     h1 {
-        opacity: 0;
+      opacity: 1;
+      position: absolute;
+      z-index: 100;
+      font-size: 0.8rem;
+      background-color: rgb(145, 123, 99);
+      padding: 0.5rem 2rem;
+      border-radius: 1rem;
+      width: 10.8rem;
+      left: calc(50% - 5.4rem);
+      top: 3rem;
     }
+  }
 
-    form {
-        /* weather controls */
-        fieldset:first-of-type {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+  form {
+    /* weather controls */
+    fieldset:first-of-type {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
 
-            label {
-                cursor: pointer;
-                position: relative;
-                display: block;
-                aspect-ratio: 1;
-                width: 7rem;
-                background-color: hotpink;
-            }
+      label {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        aspect-ratio: 1;
+        width: 7rem;
+        background-color: midnightblue;
+        transition: var(--transition-base);
+      }
 
-            /* rainy */
-            label:first-of-type {
-                input {
-                }
-            }
-
-            /* thunder */
-            label:nth-of-type(2) {
-                input {
-                }
-            }
-
-            /* freezing */
-            label:nth-of-type(3) {
-                input {
-                }
-            }
-
-            /* sunny */
-            label:nth-of-type(4) {
-                input {
-                }
-            }
+      @media (min-width: 800px) {
+        label {
+          background-color: transparent;
         }
+      }
+
+      label:hover {
+        opacity: 0.8;
+      }
+
+      /* rainy */
+      @media (min-width: 800px) {
+        label {
+          position: relative;
+          background-color: black;
+          border-radius: 1rem;
+          outline: 2px solid grey;
+          border: 2px solid rgb(78, 78, 78);
+          width: 1rem;
+          height: 8rem;
+          transform: translateY(-1rem);
+          perspective: 10rem;
+        }
+
+        label::before {
+          content: '';
+          position: absolute;
+          width: 1.5rem;
+          left: -0.4rem;
+          height: 1.2rem;
+          top: 0.5rem;
+          transform: rotateX(10deg);
+          transition: var(--transition-base);
+          background: linear-gradient(
+            var(--steampunk-button-primary-color),
+            var(--steampunk-button-secondary-color),
+            var(--steampunk-button-primary-color),
+            var(--steampunk-button-secondary-color),
+            var(--steampunk-button-primary-color),
+            var(--steampunk-button-secondary-color),
+            var(--steampunk-button-primary-color),
+            var(--steampunk-button-secondary-color),
+            var(--steampunk-button-primary-color),
+            var(--steampunk-button-secondary-color),
+            var(--steampunk-button-primary-color),
+            var(--steampunk-button-secondary-color),
+            var(--steampunk-button-primary-color),
+            var(--steampunk-button-secondary-color)
+          );
+          outline: 2px solid var(--steampunk-button-primary-color);
+          border-top: 2px solid var(--steampunk-button-primary-color);
+          border-bottom: 1px solid var(--steampunk-button-primary-color);
+        }
+
+        label::after {
+          content: '';
+          position: absolute;
+          width: 1.75rem;
+          height: 0.5rem;
+          left: -0.52rem;
+          top: 1.8rem;
+          transform: rotateX(110deg);
+          background-color: var(--steampunk-button-primary-color);
+          filter: brightness(0.8);
+          transition: var(--transition-base);
+        }
+      }
     }
+
+    @media (min-width: 800px) {
+      fieldset:first-of-type {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: var(--control-panel-bg-color);
+        height: 100%;
+        width: 100%;
+        transform: rotateX(10deg);
+        perspective: 10rem;
+      }
+
+      fieldset:first-of-type::before {
+        content: '';
+        transform: rotateX(170deg);
+        bottom: -1.7rem;
+        width: 98.4%;
+        position: absolute;
+        height: 2rem;
+        background-color: var(--control-panel-bg-color);
+        filter: brightness(0.8);
+      }
+    }
+
+    @media (min-width: 800px) {
+      > div {
+        perspective: 20rem;
+        height: 100%;
+        width: 100%;
+
+        /* rainy */
+        > div:first-of-type {
+          position: absolute;
+          width: 5rem;
+          aspect-ratio: 1 / 1.7;
+          background-color: var(--water-color);
+          right: 2rem;
+          bottom: 2rem;
+          transform: rotateX(10deg);
+          border: 7px solid var(--silver-color);
+        }
+
+        > div:first-of-type::before {
+          content: '';
+          position: absolute;
+          background-color: var(--silver-color);
+          filter: brightness(0.9);
+          width: 5.1rem;
+          height: 0.9rem;
+          bottom: -1.35rem;
+          left: -0.65rem;
+          transform: skewX(-20deg);
+        }
+
+        > div:first-of-type::after {
+          content: '';
+          position: absolute;
+          background-color: var(--silver-color);
+          filter: brightness(0.8);
+
+          width: 0.4rem;
+          top: 0.05rem;
+          height: 8.4rem;
+          left: -0.8rem;
+          transform: skewY(-70deg);
+        }
+
+        /* thunder */
+        > div:nth-of-type(2) {
+          position: absolute;
+          width: 6rem;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background-color: aqua;
+          top: 0;
+          right: 5rem;
+        }
+
+        > div:nth-of-type(2)::before,
+        > div:nth-of-type(2)::after {
+          content: '';
+          height: 5rem;
+          position: absolute;
+          width: 5rem;
+          background: linear-gradient(
+            90deg,
+            var(--silver-color) 23%,
+            var(--silver-lighter-color) 23% 77%,
+            var(--silver-color) 77%
+          );
+          position: absolute;
+          width: 5.8rem;
+          bottom: -1rem;
+          left: 0.12rem;
+        }
+
+        > div:nth-of-type(2)::before {
+          clip-path: polygon(
+            0 39%,
+            0 71%,
+            23% 100%,
+            76% 100%,
+            100% 69%,
+            100% 37%,
+            79% 59%,
+            23% 59%
+          );
+        }
+
+        > div:nth-of-type(2)::after {
+          clip-path: polygon(
+            0 39%,
+            0 71%,
+            23% 100%,
+            76% 100%,
+            100% 69%,
+            100% 37%,
+            77% 13%,
+            24% 14%
+          );
+          opacity: 0.1;
+        }
+
+        /* freezing */
+
+        /* sunny */
+        > div:nth-of-type(4) {
+          position: absolute;
+          width: 4rem;
+          aspect-ratio: 1 / 3.25;
+          border-radius: 2rem;
+          top: 6rem;
+          left: 2.5rem;
+          border: 0.8rem solid var(--silver-color);
+          transform: rotateX(10deg);
+
+          > span {
+            background: radial-gradient(#fffff3, #ffe68a);
+            aspect-ratio: 1 / 2.75;
+            position: absolute;
+            border-radius: 30% 30% 50% 50%;
+            width: 2.9rem;
+            right: -0.1rem;
+            top: 2.2rem;
+            box-shadow: 0 0.5rem 1rem #ffffd3;
+
+            > span {
+              content: '';
+              width: 2.5rem;
+              left: 0.15rem;
+              height: 0.5rem;
+              border-radius: 1rem;
+              background-color: var(--silver-color);
+              position: absolute;
+            }
+
+            > span:first-of-type {
+              top: 0;
+              filter: brightness(0.9);
+            }
+
+            > span:nth-of-type(2) {
+              top: -0.45rem;
+              filter: brightness(0.8);
+            }
+
+            > span:nth-of-type(3) {
+              top: -0.9rem;
+              filter: brightness(0.7);
+            }
+
+            > span:nth-of-type(4) {
+              top: -1.35rem;
+              width: 2.2rem;
+              left: 0.3rem;
+              filter: brightness(0.6);
+            }
+
+            > span:nth-of-type(5) {
+              top: -1.8rem;
+              width: 1.8rem;
+              left: 0.5rem;
+              filter: brightness(0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 800px) {
+    form {
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  main nav {
+    height: 20rem;
+    aspect-ratio: 2 / 1;
+    bottom: 5rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+/* stuff changes when checked!!!??!??!?! */
+@media (min-width: 800px) {
+  label:first-of-type:has(input[value='rainy']:checked)::before,
+  label:nth-of-type(2):has(input[value='thunder']:checked)::before,
+  label:nth-of-type(3):has(input[value='freezing']:checked)::before,
+  label:nth-of-type(4):has(input[value='sunny']:checked)::before {
+    top: 5.5rem;
+  }
+
+  label:first-of-type:has(input[value='rainy']:checked)::after,
+  label:nth-of-type(2):has(input[value='thunder']:checked)::after,
+  label:nth-of-type(3):has(input[value='freezing']:checked)::after,
+  label:nth-of-type(4):has(input[value='sunny']:checked)::after {
+    top: 6.8rem;
+  }
+
+  body:has(input[value='rainy']:checked) {
+    main nav form > div > div:first-of-type {
+      background-color: #9bcece;
+    }
+  }
+
+  body:has(input[value='thunder']:checked) {
+    main nav form > div > div:nth-of-type(2) {
+      background-color: #ffe68a;
+    }
+  }
+
+  body:has(input[value='freezing']:checked) {
+    main nav form > div > div:nth-of-type(3) {
+      background-color: #e08aff;
+    }
+  }
+
+  body:has(input[value='sunny']:checked) {
+    main nav form > div > div:nth-of-type(4) > span {
+      background: radial-gradient(#89ff8f, #2a542d);
+    }
+  }
 }

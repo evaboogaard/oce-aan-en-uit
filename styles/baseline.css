@@ -1,12 +1,19 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --control-panel-bg-color: #5a4539;
-    --transition-base: 0.5s ease-out;
+  --control-panel-bg-color: #5a4539;
+  --steampunk-button-primary-color: #e4c092;
+  --steampunk-button-secondary-color: #3f2005;
+
+  --water-color: rgb(62, 129, 201);
+  --silver-color: #9f9f9f;
+  --silver-lighter-color: #b5b5b5;
+
+  --transition-base: 0.5s ease-out;
 }
 
 h1,
@@ -17,42 +24,42 @@ p,
 li,
 button,
 label {
-    font-family: monospace;
+  font-family: monospace;
 }
 
 button {
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 fieldset {
-    border: none;
+  border: none;
 }
 
 @property --p {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 10%;
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 10%;
 }
 
 main > div:first-of-type {
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(gold var(--p), chocolate);
-    background-size: 150% 150%;
-    background-position: top center;
-    animation: sky-moving 5s infinite alternate ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(gold var(--p), chocolate);
+  background-size: 150% 150%;
+  background-position: top center;
+  animation: sky-moving 5s infinite alternate ease-in-out;
 }

@@ -1,55 +1,79 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>oce-aan en -uit</title>
-        <link rel="stylesheet" href="./main.css" />
-    </head>
-    <body>
-        <main>
-            <!-- control panel -->
-            <nav>
-                <h1>oce-aan-en-uit</h1>
-                <form action="#">
-                    <!-- weather controls -->
-                    <fieldset>
-                        <label for="rainy">
-                            <input type="radio" value="rainy" name="weather" />
-                        </label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oce-aan en -uit</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <main>
+      <!-- control panel -->
+      <nav>
+        <h1>oce-aan-en-uit</h1>
+        <form action="#">
+          <!-- weather controls -->
+          <div>
+            <fieldset>
+              <label for="rainy">
+                <input type="radio" id="rainy" value="rainy" name="weather" />
+              </label>
 
-                        <label for="thunder">
-                            <input
-                                type="radio"
-                                value="thunder"
-                                name="weather"
-                            />
-                        </label>
+              <label for="thunder">
+                <input
+                  type="radio"
+                  id="thunder"
+                  value="thunder"
+                  name="weather"
+                />
+              </label>
 
-                        <label for="freezing">
-                            <input
-                                type="radio"
-                                value="freezing"
-                                name="weather"
-                            />
-                        </label>
+              <label for="freezing">
+                <input
+                  type="radio"
+                  id="freezing"
+                  value="freezing"
+                  name="weather"
+                />
+              </label>
 
-                        <label for="sunny">
-                            <input type="radio" value="sunny" name="weather" />
-                        </label>
-                    </fieldset>
+              <label for="sunny">
+                <input type="radio" id="sunny" value="sunny" name="weather" />
+              </label>
+            </fieldset>
 
-                    <!-- day/night -->
-                    <fieldset>
+            <!-- regen knopje -->
+            <div></div>
+
+            <!-- bliksem knopje -->
+            <div></div>
+
+            <!-- vriezen knopje -->
+            <div></div>
+
+            <!-- zonnig knopje -->
+            <div>
+              <span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+          </div>
+
+          <!-- day/night -->
+          <!-- <fieldset>
                         <label for="day"> </label>
                         <input type="radio" value="day" name="time" />
 
                         <label for="night"> </label>
                         <input type="radio" value="night" name="time" />
-                    </fieldset>
-                </form>
-            </nav>
-            <div></div>
-        </main>
-    </body>
+                    </fieldset> -->
+        </form>
+      </nav>
+      <div></div>
+    </main>
+  </body>
 </html>
