@@ -1,5 +1,6 @@
 /* baseline */
 @import 'styles/baseline.css';
+@import 'styles/animations.css';
 
 /* components */
 @import 'styles/components/controlpanel.css';

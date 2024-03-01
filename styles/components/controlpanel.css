@@ -1,0 +1,52 @@
+main nav {
+    position: fixed;
+    left: 0;
+    height: 80vh;
+    top: 10vh;
+
+    h1 {
+        opacity: 0;
+    }
+
+    form {
+        /* weather controls */
+        fieldset:first-of-type {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label {
+                cursor: pointer;
+                position: relative;
+                display: block;
+                aspect-ratio: 1;
+                width: 7rem;
+                background-color: hotpink;
+            }
+
+            /* rainy */
+            label:first-of-type {
+                input {
+                }
+            }
+
+            /* thunder */
+            label:nth-of-type(2) {
+                input {
+                }
+            }
+
+            /* freezing */
+            label:nth-of-type(3) {
+                input {
+                }
+            }
+
+            /* sunny */
+            label:nth-of-type(4) {
+                input {
+                }
+            }
+        }
+    }
+}

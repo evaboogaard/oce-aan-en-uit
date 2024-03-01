@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary-color: #fff;
+    --control-panel-bg-color: #5a4539;
     --transition-base: 0.5s ease-out;
 }
 
@@ -28,4 +28,31 @@ button {
 
 ul {
     list-style: none;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+fieldset {
+    border: none;
+}
+
+@property --p {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 10%;
+}
+
+main > div:first-of-type {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(gold var(--p), chocolate);
+    background-size: 150% 150%;
+    background-position: top center;
+    animation: sky-moving 5s infinite alternate ease-in-out;
 }
