@@ -7,3 +7,13 @@
     --p: 40%;
   }
 }
+
+@keyframes bubblebutton {
+  0% {
+    transform: translateY(10rem);
+  }
+
+  100% {
+    transform: translateY(-10rem);
+  }
+}
