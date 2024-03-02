@@ -9,9 +9,12 @@
   --steampunk-button-primary-color: #e4c092;
   --steampunk-button-secondary-color: #3f2005;
 
-  --water-color: rgb(62, 129, 201);
-  --silver-color: #9f9f9f;
-  --silver-lighter-color: #b5b5b5;
+  --water-color: #3e81c9;
+  --bubble-color: #bdedff;
+
+  --metal-color: #9f9f9f;
+  --metal-color-lighter: #b5b5b5;
+  --metal-color-darker: #606060;
 
   --transition-base: 0.5s ease-out;
 }

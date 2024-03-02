@@ -33,3 +33,4 @@ ik kon de 'vibe' van mijn control panel niet zo goed bepalen. ik vond dit contro
 - https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
 - https://bennettfeely.com/clippy/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/border-image
+- https://developer.mozilla.org/en-US/docs/Web/CSS/filter

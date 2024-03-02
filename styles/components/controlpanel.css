@@ -24,7 +24,7 @@ main nav {
   }
 
   form {
-    /* weather controls */
+    /* klimaat controls */
     fieldset:first-of-type {
       display: flex;
       flex-direction: column;
@@ -50,7 +50,7 @@ main nav {
         opacity: 0.8;
       }
 
-      /* rainy */
+      /* regenachtig */
       @media (min-width: 800px) {
         label {
           position: relative;
@@ -150,13 +150,13 @@ main nav {
           right: 2rem;
           bottom: 2rem;
           transform: rotateX(10deg);
-          border: 7px solid var(--silver-color);
+          border: 7px solid var(--metal-color);
         }
 
         > div:first-of-type::before {
           content: '';
           position: absolute;
-          background-color: var(--silver-color);
+          background-color: var(--metal-color);
           filter: brightness(0.9);
           width: 5.1rem;
           height: 0.9rem;
@@ -168,7 +168,7 @@ main nav {
         > div:first-of-type::after {
           content: '';
           position: absolute;
-          background-color: var(--silver-color);
+          background-color: var(--metal-color);
           filter: brightness(0.8);
 
           width: 0.4rem;
@@ -178,7 +178,55 @@ main nav {
           transform: skewY(-70deg);
         }
 
-        /* thunder */
+        /* bubblessss */
+        @keyframes bubble-button {
+          0% {
+            background-color: red;
+          }
+
+          100% {
+            background-color: yellow;
+          }
+        }
+
+        > div:first-of-type > span {
+          overflow: hidden;
+          width: 80%;
+          height: 100%;
+          padding-left: 10%;
+          position: absolute;
+
+          span {
+            background-color: var(--bubble-color);
+            border-radius: 50%;
+            position: absolute;
+            aspect-ratio: 1;
+          }
+
+          span:first-of-type {
+            width: 1rem;
+            bottom: 0;
+            left: 2rem;
+          }
+
+          span:nth-of-type(2) {
+            width: 1.2rem;
+          }
+
+          span:nth-of-type(3) {
+            width: 0.9rem;
+          }
+
+          span:nth-of-type(4) {
+            width: 1.3rem;
+          }
+
+          span:nth-of-type(5) {
+            width: 1rem;
+          }
+        }
+
+        /* donder en bliksem */
         > div:nth-of-type(2) {
           position: absolute;
           width: 6rem;
@@ -197,9 +245,9 @@ main nav {
           width: 5rem;
           background: linear-gradient(
             90deg,
-            var(--silver-color) 23%,
-            var(--silver-lighter-color) 23% 77%,
-            var(--silver-color) 77%
+            var(--metal-color) 23%,
+            var(--metal-color-lighter) 23% 77%,
+            var(--metal-color) 77%
           );
           position: absolute;
           width: 5.8rem;
@@ -234,9 +282,9 @@ main nav {
           opacity: 0.1;
         }
 
-        /* freezing */
+        /* ijskoud */
 
-        /* sunny */
+        /* zonnig */
         > div:nth-of-type(4) {
           position: absolute;
           width: 4rem;
@@ -244,18 +292,18 @@ main nav {
           border-radius: 2rem;
           top: 6rem;
           left: 2.5rem;
-          border: 0.8rem solid var(--silver-color);
+          border: 0.8rem solid var(--metal-color);
           transform: rotateX(10deg);
 
-          > span {
-            background: radial-gradient(#fffff3, #ffe68a);
+          > span:first-of-type {
+            background: radial-gradient(white, gold);
+            filter: grayscale(0.7) brightness(0.8);
             aspect-ratio: 1 / 2.75;
             position: absolute;
             border-radius: 30% 30% 50% 50%;
             width: 2.9rem;
             right: -0.1rem;
             top: 2.2rem;
-            box-shadow: 0 0.5rem 1rem #ffffd3;
 
             > span {
               content: '';
@@ -263,7 +311,7 @@ main nav {
               left: 0.15rem;
               height: 0.5rem;
               border-radius: 1rem;
-              background-color: var(--silver-color);
+              background-color: var(--metal-color);
               position: absolute;
             }
 
@@ -296,6 +344,131 @@ main nav {
               filter: brightness(0.5);
             }
           }
+
+          /* metalen frame */
+
+          > span:nth-of-type(2),
+          > span:nth-of-type(2)::before,
+          > span:nth-of-type(2)::after {
+            background: radial-gradient(
+              var(--metal-color),
+              var(--metal-color-darker)
+            );
+            position: absolute;
+            width: 0.2rem;
+            border-radius: 1rem;
+          }
+
+          > span:nth-of-type(2) {
+            height: 108%;
+            top: -1.8rem;
+            left: 0.5rem;
+          }
+
+          > span:nth-of-type(2)::before {
+            content: '';
+            top: 0;
+            left: 0.2rem;
+            height: 1.6rem;
+            transform: skewX(15deg);
+          }
+
+          > span:nth-of-type(2)::after {
+            content: '';
+            height: 1.6rem;
+            left: 0.2rem;
+            transform: skewX(15deg);
+            bottom: -1.5rem;
+          }
+
+          > div {
+            span:first-of-type,
+            span:first-of-type::before,
+            span:first-of-type::after,
+            span:nth-of-type(2),
+            span:nth-of-type(2)::before,
+            span:nth-of-type(2)::after,
+            span:nth-of-type(3),
+            span:nth-of-type(3)::before,
+            span:nth-of-type(3)::after,
+            span:nth-of-type(4),
+            span:nth-of-type(4)::before,
+            span:nth-of-type(4)::after,
+            span:nth-of-type(5),
+            span:nth-of-type(5)::before,
+            span:nth-of-type(5)::after {
+              background: radial-gradient(
+                var(--metal-color),
+                var(--metal-color-darker)
+              );
+              position: absolute;
+              border-radius: 1rem;
+            }
+
+            span:first-of-type,
+            span:nth-of-type(2),
+            span:nth-of-type(3),
+            span:nth-of-type(4),
+            span:nth-of-type(5) {
+              height: 0.2rem;
+              width: 3.5rem;
+              left: -0.8rem;
+            }
+
+            span:first-of-type {
+              top: 1rem;
+            }
+
+            span:nth-of-type(2) {
+              top: 3rem;
+            }
+
+            span:nth-of-type(3) {
+              top: 5rem;
+            }
+
+            span:nth-of-type(4) {
+              top: 7rem;
+            }
+
+            span:nth-of-type(5) {
+              top: 9rem;
+            }
+
+            span:first-of-type::before,
+            span:first-of-type::after,
+            span:nth-of-type(2)::before,
+            span:nth-of-type(2)::after,
+            span:nth-of-type(3)::before,
+            span:nth-of-type(3)::after,
+            span:nth-of-type(4)::before,
+            span:nth-of-type(4)::after,
+            span:nth-of-type(5)::before,
+            span:nth-of-type(5)::after {
+              width: 0.2rem;
+              height: 1rem;
+              top: 0;
+              transform: skewX(15deg);
+            }
+
+            span:first-of-type::before,
+            span:nth-of-type(2)::before,
+            span:nth-of-type(3)::before,
+            span:nth-of-type(4)::before,
+            span:nth-of-type(5)::before {
+              content: '';
+              left: 0.1rem;
+            }
+
+            span:first-of-type::after,
+            span:nth-of-type(2)::after,
+            span:nth-of-type(3)::after,
+            span:nth-of-type(4)::after,
+            span:nth-of-type(5)::after {
+              content: '';
+              right: -0.15rem;
+            }
+          }
         }
       }
     }
@@ -317,7 +490,6 @@ main nav {
   }
 }
 
-/* stuff changes when checked!!!??!??!?! */
 @media (min-width: 800px) {
   label:first-of-type:has(input[value='rainy']:checked)::before,
   label:nth-of-type(2):has(input[value='thunder']:checked)::before,
@@ -353,7 +525,8 @@ main nav {
 
   body:has(input[value='sunny']:checked) {
     main nav form > div > div:nth-of-type(4) > span {
-      background: radial-gradient(#89ff8f, #2a542d);
+      box-shadow: 0 0.5rem 1rem #ffffd3;
+      filter: grayscale(0);
     }
   }
 }
