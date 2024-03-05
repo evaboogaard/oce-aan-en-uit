@@ -9,6 +9,14 @@
   --steampunk-button-primary-color: #e4c092;
   --steampunk-button-secondary-color: #3f2005;
 
+  --ocean-color: #276abb;
+  --ocean-color-darker: #003d87;
+  --ocean-color-dark: #002655;
+
+  --boat-primary-color: #b42020;
+  --boat-secondary-color: #ffffff;
+  --boat-tertiary-color: rgb(119, 133, 148);
+
   --water-color: #3e81c9;
   --bubble-color: #d4f4ff69;
 
@@ -16,7 +24,9 @@
   --metal-color-lighter: #b5b5b5;
   --metal-color-darker: #606060;
 
+  --shadow-color-base: #00000080;
   --transition-base: 0.5s ease-out;
+  --transition-slower: 1s ease-out;
 }
 
 h1,
@@ -50,19 +60,4 @@ input {
 
 fieldset {
   border: none;
-}
-
-@property --p {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 10%;
-}
-
-main > div:first-of-type {
-  width: 100vw;
-  height: 100vh;
-  background: radial-gradient(gold var(--p), chocolate);
-  background-size: 150% 150%;
-  background-position: top center;
-  animation: sky-moving 5s infinite alternate ease-in-out;
 }

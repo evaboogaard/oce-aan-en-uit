@@ -1,0 +1,191 @@
+/* bootje container om te centeren */
+
+main > div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  /* bootje container om te slepen */
+
+  > div {
+    overflow: hidden;
+    padding: 0.5rem;
+    transform: translateY(-7rem);
+    resize: horizontal;
+    min-width: 12.5rem;
+    height: 15rem;
+    container: boat / inline-size;
+
+    /* bootje */
+    > div:first-of-type {
+      position: relative;
+      background-image: linear-gradient(
+          60deg,
+          transparent 0 2.5rem,
+          var(--boat-primary-color) 2.5rem 0
+        ),
+        linear-gradient(
+          -60deg,
+          transparent 0 2.5rem,
+          var(--boat-primary-color) 2.5rem 0
+        );
+      background-size: 50% 33%;
+      background-repeat: no-repeat;
+      background-position:
+        bottom left,
+        bottom right;
+      height: 100%;
+      bottom: 0;
+      filter: drop-shadow(0.2rem 0.1rem 0.15rem var(--shadow-color-base));
+    }
+
+    /* mast van het zeil */
+    > div:first-of-type::before {
+      content: '';
+      background-color: black;
+      width: 0.2rem;
+      height: 67%;
+      position: absolute;
+      left: calc(50% - 0.1rem);
+      border-radius: 100% 0 0 0;
+    }
+
+    /* zeil */
+    > div:first-of-type::after {
+      content: '';
+      background: linear-gradient(
+        60deg,
+        antiquewhite 0% 50%,
+        transparent 50% 100%
+      );
+      height: 60%;
+      position: absolute;
+      width: 5rem;
+      left: calc(50% + 0.1rem);
+      animation: zeil-wapperen 8s infinite ease-in-out;
+      transform-origin: left;
+    }
+  }
+}
+
+@container boat (min-width: 16rem) {
+  main > div:nth-of-type(2) > div {
+    > div:first-of-type {
+      --boat-primary-color: #cce3ff;
+    }
+
+    > div:first-of-type::before {
+      width: 60%;
+      height: 3rem;
+      top: 6.36rem;
+      left: 20%;
+      border-radius: 1rem 0.25rem 0 0;
+      background: linear-gradient(
+        to bottom,
+        var(--boat-secondary-color) 0 47%,
+        var(--boat-tertiary-color) 47% 50%,
+        var(--boat-secondary-color) 50% 60%,
+        var(--boat-primary-color) 60% 80%,
+        var(--boat-secondary-color) 80% 100%
+      );
+      box-shadow: inset 0 -0.2rem 0.3rem var(--boat-tertiary-color);
+    }
+
+    > div:first-of-type::after {
+      width: 4rem;
+      height: 3rem;
+      top: 3.38rem;
+      left: 50%;
+      background-color: var(--boat-tertiary-color);
+      background-image: none;
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    > v {
+      position: absolute;
+      height: 6.88rem;
+      width: 3rem;
+      top: 0;
+      left: 50%;
+      transform: translateX(-100%);
+      perspective: 10rem;
+    }
+
+    > v::before {
+      content: '';
+      position: absolute;
+      width: 0.1rem;
+      background-color: #7e5630;
+      height: 100%;
+      left: calc(50% - 0.05rem);
+      border-radius: 50% 50% 0 0;
+    }
+
+    > v::after {
+      width: 0.7rem;
+      content: '';
+      position: absolute;
+      border-left: 1rem solid var(--boat-primary-color);
+      border-top: 0.5rem solid transparent;
+      border-bottom: 0.5rem solid transparent;
+      left: calc(50% + 0.04rem);
+      top: 0.5rem;
+      animation: vlag-wapperen 6s infinite ease-in-out;
+      transform-origin: left;
+    }
+
+    > div:nth-of-type(2) {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      transform: translate(12%, -3rem);
+      width: 80%;
+
+      r {
+        width: 1.25rem;
+        height: 1.25rem;
+        background: linear-gradient(45deg, #d8d8d8 40%, var(--ocean-color));
+        border: 5px ridge var(--boat-tertiary-color);
+        border-radius: 50%;
+      }
+
+      r:first-of-type,
+      r:nth-of-type(2),
+      r:nth-of-type(3),
+      r:nth-of-type(7),
+      r:nth-of-type(8),
+      r:last-of-type {
+        display: none;
+      }
+    }
+  }
+}
+
+@container boat (min-width: 18rem) {
+  main > div:nth-of-type(2) > div > div:nth-of-type(2) {
+    r:nth-of-type(3),
+    r:nth-of-type(7) {
+      display: block;
+    }
+  }
+}
+
+@container boat (min-width: 22rem) {
+  main > div:nth-of-type(2) > div > div:nth-of-type(2) {
+    r:nth-of-type(2),
+    r:nth-of-type(8) {
+      display: block;
+    }
+  }
+}
+
+@container boat (min-width: 26rem) {
+  main > div:nth-of-type(2) > div > div:nth-of-type(2) {
+    r:first-of-type,
+    r:last-of-type {
+      display: block;
+    }
+  }
+}

@@ -18,6 +18,8 @@ ik kon de 'vibe' van mijn control panel niet zo goed bepalen. ik vond dit contro
 ![](./img/process/steampunk.jpeg)
 ![](./img/process/sketch_3.jpg)
 
+### week 2
+
 ## bronnenlijst
 
 - https://www.w3schools.com/tags/att_form_action.asp
@@ -34,3 +36,9 @@ ik kon de 'vibe' van mijn control panel niet zo goed bepalen. ik vond dit contro
 - https://bennettfeely.com/clippy/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/border-image
 - https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+- https://codepen.io/gayane-gasparyan/pen/yLqjVWb
+- https://developer.mozilla.org/en-US/docs/Web/CSS/resize
+- https://cmda-minor-web.github.io/css-to-the-rescue-2324/samples.html
+- https://coder-coder.com/z-index-isnt-working/
+- https://www.w3schools.com/css/css3_3dtransforms.asp
+- https://developer.mozilla.org/en-US/docs/Web/CSS/border

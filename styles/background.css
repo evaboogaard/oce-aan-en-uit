@@ -1,0 +1,41 @@
+@property --p {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 10%;
+}
+
+/* lucht */
+
+main > div:first-of-type {
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 50vh;
+  background: radial-gradient(gold var(--p), chocolate);
+  background-size: 150% 150%;
+  background-position: top center;
+  animation: bewegende-lucht 5s infinite alternate ease-in-out;
+
+  span {
+    width: 20rem;
+    position: absolute;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: rgb(255, 236, 193);
+    bottom: -7.5rem;
+    left: calc(50% - 10rem);
+    animation: zon-gloeien 3s infinite ease-in-out alternate;
+  }
+}
+
+/* oceaan kleurtje */
+
+main {
+  background: linear-gradient(
+    var(--ocean-color),
+    var(--ocean-color-darker),
+    var(--ocean-color-dark),
+    black 70%
+  );
+  height: 800vh;
+}
