@@ -65,7 +65,11 @@ body:has(form > div > fieldset input:checked) form > div > fieldset {
 
   body:has(input[value='bliksem']:checked) {
     main nav form > div > div > div:nth-of-type(2) {
-      background-color: #ffe68a;
+      background-color: #858585;
+
+      & b {
+        transform: scaleY(1);
+      }
     }
   }
 

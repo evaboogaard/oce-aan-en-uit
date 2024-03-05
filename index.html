@@ -57,7 +57,13 @@
               </div>
 
               <!-- bliksem knopje -->
-              <div></div>
+              <div>
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+              </div>
 
               <!-- vriezen knopje -->
               <div></div>
@@ -132,5 +138,64 @@
         </div>
       </div>
     </main>
+
+    <svg>
+      <defs>
+        <filter id="squiggly-0">
+          <feTurbulence
+            id="turbulence"
+            baseFrequency="0.03"
+            numOctaves="5"
+            seed="0"
+            result="NOISE"
+          />
+          <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="6" />
+        </filter>
+
+        <filter id="squiggly-1">
+          <feTurbulence
+            id="turbulence"
+            baseFrequency="0.05"
+            numOctaves="5"
+            seed="1"
+            result="NOISE"
+          />
+          <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="7" />
+        </filter>
+
+        <filter id="squiggly-2">
+          <feTurbulence
+            id="turbulence"
+            baseFrequency="0.07"
+            numOctaves="5"
+            seed="2"
+            result="NOISE"
+          />
+          <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="8" />
+        </filter>
+
+        <filter id="squiggly-3">
+          <feTurbulence
+            id="turbulence"
+            baseFrequency="0.03"
+            numOctaves="5"
+            seed="3"
+            result="NOISE"
+          />
+          <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="7" />
+        </filter>
+
+        <filter id="squiggly-4">
+          <feTurbulence
+            id="turbulence"
+            baseFrequency="0.09"
+            numOctaves="5"
+            seed="4"
+            result="NOISE"
+          />
+          <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="6" />
+        </filter>
+      </defs>
+    </svg>
   </body>
 </html>
