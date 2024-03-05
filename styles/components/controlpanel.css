@@ -233,7 +233,11 @@ main nav {
           width: 6rem;
           aspect-ratio: 1;
           border-radius: 50%;
-          background-color: aqua;
+          background: radial-gradient(
+            hsl(0, 0%, 80%, 0.5),
+            hsla(0, 0%, 30%, 0.5)
+          );
+
           top: 0;
           right: 5rem;
           transition: var(--transition-slower);

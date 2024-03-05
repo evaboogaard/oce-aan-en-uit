@@ -40,6 +40,7 @@ ik begon met het maken van het bootje en ik moest even stoeien en schelden met d
 
 ook heb ik d.m.v. de workshop svg filters elektriciteit kunnen nabootsen (waarvan ik echt dacht: hoe gaat me dat ooit lukken met alleen CSS?). ik ben hier onnodig blij mee.
 ![](./img/process/elektriciteit.png)
+![](./img/process/elektriciteit_2.png)
 
 ## bronnenlijst
 
