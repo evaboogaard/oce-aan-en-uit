@@ -11,20 +11,190 @@ main > div:first-of-type {
   overflow: hidden;
   width: 100vw;
   height: 50vh;
-  background: radial-gradient(gold var(--p), chocolate);
+  background: radial-gradient(
+    var(--lucht-light-color) var(--p),
+    var(--lucht-dark-color)
+  );
   background-size: 150% 150%;
   background-position: top center;
   animation: bewegende-lucht 5s infinite alternate ease-in-out;
 
-  span {
+  /* zonnetje */
+  > span:first-of-type {
     width: 20rem;
     position: absolute;
     height: 20rem;
     border-radius: 50%;
-    background-color: rgb(255, 236, 193);
+    background-color: var(--sun-color);
     bottom: -7.5rem;
     left: calc(50% - 10rem);
     animation: zon-gloeien 3s infinite ease-in-out alternate;
+    transition: var(--transition-slower);
+  }
+
+  /* wolkjes */
+  > span:nth-of-type(2),
+  > span:nth-of-type(3) {
+    width: 12rem;
+    aspect-ratio: 3/1;
+    background: var(--cloud-color);
+    position: absolute;
+    border-radius: 50%;
+    transform: translateY(30rem);
+    transition: var(--transition-slower);
+    transform-style: preserve-3d;
+
+    &::before,
+    &::after {
+      aspect-ratio: 2/1;
+      position: absolute;
+      border-radius: 50%;
+      transition: var(--transition-slower);
+    }
+
+    &::before {
+      content: '';
+      bottom: -4vh;
+      left: 1.25rem;
+      width: 5rem;
+      background: var(--cloud-color);
+      box-shadow:
+        -1.25rem -1.25rem 0 var(--cloud-color),
+        2.5rem -2.5rem 0 var(--cloud-color),
+        4rem -0.75rem 0 var(--cloud-color);
+    }
+
+    &::after {
+      content: '';
+      top: -1.25rem;
+      right: 1.25rem;
+      width: 6rem;
+      background: var(--cloud-color);
+      box-shadow:
+        2rem 2rem 0 var(--cloud-color),
+        -4rem -1.25rem 0 var(--cloud-color),
+        -7rem 0.75rem 0 var(--cloud-color);
+    }
+
+    l {
+      background-color: var(--electricity-color);
+      width: 0.1rem;
+      height: 3rem;
+      top: 8rem;
+      left: 3rem;
+      rotate: 20deg;
+      transform: translateZ(-1rem);
+      position: absolute;
+      animation: elektriciteit-filter 0.6s infinite;
+      transition: var(--transition-slower);
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0.1rem;
+        background-color: var(--electricity-color);
+      }
+
+      &::before {
+        height: 4rem;
+        top: 2.6rem;
+        left: 1.3rem;
+        rotate: -40deg;
+      }
+
+      &::after {
+        height: 2.3rem;
+        top: -2.1rem;
+        left: -0.6rem;
+        rotate: -30deg;
+      }
+
+      &:first-of-type {
+      }
+
+      &:nth-of-type(2) {
+      }
+
+      &:nth-of-type(3) {
+      }
+    }
+  }
+
+  > span:nth-of-type(2) {
+    left: 10vw;
+    top: 10vh;
+  }
+
+  > span:nth-of-type(3) {
+    right: 10vw;
+    top: 25vh;
+  }
+
+  /* regen! */
+
+  > span:nth-of-type(4),
+  > span:nth-of-type(5),
+  > span:nth-of-type(6) {
+    position: absolute;
+    width: 0.1rem;
+    background-color: var(--rain-color);
+    aspect-ratio: 1 / 10;
+    border-radius: 100% 100% 50% 50%;
+    z-index: 100;
+    top: -5vh;
+    display: none;
+  }
+
+  > span:nth-of-type(4) {
+    left: 2vw;
+
+    box-shadow:
+      21vw 10vh var(--rain-color),
+      20vw 20vh var(--rain-color),
+      30vw 30vh var(--rain-color),
+      15vw 35vh var(--rain-color),
+      22vw 48vh var(--rain-color),
+      40vw 30vh var(--rain-color),
+      50vw 40vh var(--rain-color),
+      60vw 25vh var(--rain-color),
+      70vw 20vh var(--rain-color),
+      85vw 35vh var(--rain-color),
+      90vw 40vh var(--rain-color),
+      87vw 27vh var(--rain-color),
+      20vw 45vh var(--rain-color),
+      10vw 36vh var(--rain-color),
+      35vw 24vh var(--rain-color),
+      15vw 14vh var(--rain-color),
+      10vw 10vh var(--rain-color);
+
+    animation: regenen 2s infinite linear;
+  }
+
+  > span:nth-of-type(5) {
+    left: 10vw;
+
+    box-shadow:
+      10vw 13vh var(--rain-color),
+      24vw 22vh var(--rain-color),
+      18vw 28vh var(--rain-color),
+      53vw 39vh var(--rain-color),
+      29vw 42vh var(--rain-color),
+      47vw 32vh var(--rain-color),
+      56vw 30vh var(--rain-color),
+      67vw 22vh var(--rain-color),
+      74vw 18vh var(--rain-color),
+      82vw 46vh var(--rain-color),
+      98vw 12vh var(--rain-color),
+      88vw 33vh var(--rain-color),
+      17vw 42vh var(--rain-color),
+      7vw 37vh var(--rain-color),
+      30vw 27vh var(--rain-color),
+      17vw 19vh var(--rain-color),
+      13vw 15vh var(--rain-color);
+
+    filter: brightness(0.8) blur(0.5px);
+    animation: regenen 2s infinite -3s linear;
   }
 }
 

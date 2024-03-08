@@ -1,5 +1,9 @@
 body:has(form > div > fieldset input:checked) form > div > div {
-  transform: translateX(-10rem);
+  transform: translateX(-30vw);
+}
+
+body:has(form > div > fieldset input:checked) form > div > fieldset {
+  transform: translateX(-5vw);
 }
 
 @media (min-width: 800px) {
@@ -9,13 +13,15 @@ body:has(form > div > fieldset input:checked) form > div > div {
 }
 
 body:has(form > div > fieldset input:checked) form > div > fieldset {
-  label {
-    transform: rotateY(175deg) translateX(8rem);
-  }
+  transform: rotate(-180deg);
+}
 
-  @media (min-width: 800px) {
+@media (min-width: 800px) {
+  body:has(form > div > fieldset input:checked) form > div > fieldset {
+    transform: translateY(55vh);
+
     label {
-      transform: rotate(90deg);
+      transform: rotate(180deg);
     }
   }
 }
@@ -33,56 +39,5 @@ body:has(form > div > fieldset input:checked) form > div > fieldset {
   label:nth-of-type(3):has(input[value='ijskoud']:checked)::after,
   label:nth-of-type(4):has(input[value='zonnig']:checked)::after {
     top: 6.8rem;
-  }
-
-  body:has(input[value='regen']:checked) {
-    main nav form > div > div > div:first-of-type {
-      filter: brightness(1.1);
-
-      span {
-        span:first-of-type {
-          animation: bubbel-knop 5s infinite linear;
-        }
-
-        span:nth-of-type(2) {
-          animation: bubbel-knop 3s infinite -1s linear;
-        }
-
-        span:nth-of-type(3) {
-          animation: bubbel-knop 4s infinite linear;
-        }
-
-        span:nth-of-type(4) {
-          animation: bubbel-knop 2s infinite -0.5s linear;
-        }
-
-        span:nth-of-type(5) {
-          animation: bubbel-knop 5s infinite -1s linear;
-        }
-      }
-    }
-  }
-
-  body:has(input[value='bliksem']:checked) {
-    main nav form > div > div > div:nth-of-type(2) {
-      background: radial-gradient(gray, black);
-
-      & b {
-        transform: scaleY(1);
-      }
-    }
-  }
-
-  body:has(input[value='ijskoud']:checked) {
-    main nav form > div > div > div:nth-of-type(3) {
-      background-color: #e08aff;
-    }
-  }
-
-  body:has(input[value='zonnig']:checked) {
-    main nav form > div > div > div:nth-of-type(4) > span {
-      box-shadow: 0 0.5rem 1rem #ffffd3;
-      filter: grayscale(0);
-    }
   }
 }

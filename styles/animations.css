@@ -93,3 +93,82 @@
     filter: url('#squiggly-4');
   }
 }
+
+/* scroll animations!! */
+@keyframes donker-naar-licht {
+  0% {
+    background-color: rgba(0, 0, 0, var(--low-opacity));
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, var(--low-opacity));
+  }
+}
+
+/* @keyframes klein-wolkje-regent {
+  0% {
+    transform: scaleY(1) translateZ(-1rem) translateY(0rem);
+  }
+
+  40% {
+    transform: scaleY(1) translateZ(-1rem) translateY(4rem);
+  }
+
+  70% {
+    transform: scaleY(0) translateZ(-1rem) translateY(4rem);
+  }
+
+  100% {
+    transform: scaleY(0) translateZ(-1rem) translateY(4rem);
+  }
+} */
+
+@keyframes klein-wolkje-regent {
+  0% {
+    transform: scaleY(1) translateZ(-1rem);
+  }
+
+  100% {
+    transform: scaleY(0) translateZ(-1rem);
+  }
+}
+
+@keyframes regenen {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(50vh);
+  }
+}
+
+@keyframes zonnetje-inner-pulse {
+  from {
+    scale: 1.3;
+  }
+
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes zonnetje-outer-pulse {
+  from {
+    scale: 1.5;
+  }
+
+  to {
+    scale: 1.8;
+  }
+}
+
+@keyframes knopje-gloeit {
+  from {
+    box-shadow: 0 0 0.2rem white;
+  }
+
+  to {
+    box-shadow: 0 0 1.5rem white;
+  }
+}

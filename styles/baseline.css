@@ -5,28 +5,41 @@
 }
 
 :root {
-  --control-panel-bg-color: #5a4539;
-  --steampunk-button-primary-color: #e4c092;
-  --steampunk-button-secondary-color: #3f2005;
+  --control-panel-bg-color: hsl(22, 22%, 29%);
+  --steampunk-button-primary-color: hsl(34, 60%, 73%);
+  --steampunk-button-secondary-color: hsl(28, 85%, 13%);
 
-  --ocean-color: #276abb;
-  --ocean-color-darker: #003d87;
-  --ocean-color-dark: #002655;
+  --ocean-color: hsl(213, 65%, 44%);
+  --ocean-color-darker: hsl(213, 100%, 26%);
+  --ocean-color-dark: hsl(213, 100%, 17%);
 
-  --boat-primary-color: #b42020;
-  --boat-secondary-color: #ffffff;
-  --boat-tertiary-color: rgb(119, 133, 148);
+  --lucht-light-color: hsl(51, 100%, 50%);
+  --lucht-dark-color: hsl(25, 75%, 47%);
 
-  --water-color: #3e81c9;
-  --bubble-color: #d4f4ff69;
+  --sun-color: hsl(42, 100%, 88%);
 
-  --electricity-color: #fff5b3;
+  --cloud-color: hsl(0, 0%, 37%);
+  --thunder-cloud-color: hsl(0, 0%, 0%);
 
-  --metal-color: #9f9f9f;
-  --metal-color-lighter: #b5b5b5;
-  --metal-color-darker: #606060;
+  --rain-color: hsl(208, 100%, 66%);
 
-  --shadow-color-base: #00000080;
+  --boat-primary-color: hsl(0, 70%, 42%);
+  --boat-secondary-color: hsl(0, 0%, 100%);
+  --boat-tertiary-color: hsl(211, 12%, 52%);
+
+  --water-color: hsl(211, 56%, 52%);
+  --bubble-color: hsl(207, 64%, 71%);
+
+  --electricity-color: hsl(52, 100%, 85%);
+
+  --metal-color: hsl(0, 0%, 62%);
+  --metal-color-lighter: hsl(0, 0%, 71%);
+  --metal-color-darker: hsl(0, 0%, 38%);
+
+  --shadow-color-base: hsla(0, 0%, 0%, 0.5);
+
+  --low-opacity: 0.2;
+
   --transition-base: 0.5s ease-out;
   --transition-slower: 1s ease-out;
 }
@@ -62,4 +75,8 @@ input {
 
 fieldset {
   border: none;
+}
+
+body > svg {
+  display: none;
 }

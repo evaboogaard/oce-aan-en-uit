@@ -10,7 +10,7 @@
 @import 'styles/components/fish.css';
 
 /* weather states */
-@import 'styles/states/freezing.css';
-@import 'styles/states/rainy.css';
-@import 'styles/states/sunny.css';
-@import 'styles/states/thunder.css';
+@import 'styles/states/ijskoud.css';
+@import 'styles/states/regen.css';
+@import 'styles/states/zonnig.css';
+@import 'styles/states/bliksem.css';

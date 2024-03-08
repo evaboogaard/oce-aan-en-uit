@@ -18,15 +18,20 @@
 
               <fieldset>
                 <label for="regen">
+                  <div></div>
                   <input type="radio" id="regen" value="regen" name="weer" />
                 </label>
 
                 <label for="bliksem">
+                  <div>
+                    <span></span>
+                  </div>
                   <input
                     type="radio"
                     id="bliksem"
                     value="bliksem"
                     name="weer"
+                    checked
                   />
                 </label>
 
@@ -40,6 +45,7 @@
                 </label>
 
                 <label for="zonnig">
+                  <span></span>
                   <input type="radio" id="zonnig" value="zonnig" name="weer" />
                 </label>
               </fieldset>
@@ -112,6 +118,36 @@
       </nav>
       <!-- de lucht -->
       <div>
+        <!-- zonnetje -->
+        <span>
+          <!-- kraters -->
+          <k></k>
+          <k></k>
+          <k></k>
+
+          <!-- astronautje -->
+          <div></div>
+
+          <!-- alien -->
+          <div></div>
+        </span>
+        <!-- wolkjes -->
+        <span>
+          <!-- bliksem! -->
+          <l></l>
+          <l></l>
+          <l></l>
+        </span>
+        <span>
+          <!-- bliksem! -->
+          <l></l>
+          <l></l>
+          <l></l>
+        </span>
+
+        <!-- regen -->
+        <span></span>
+        <span></span>
         <span></span>
       </div>
 
@@ -194,6 +230,29 @@
             result="NOISE"
           />
           <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="6" />
+        </filter>
+      </defs>
+    </svg>
+
+    <svg>
+      <defs>
+        <filter id="blobby">
+          <!-- eerst een grote blur -->
+          <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+
+          <!-- dan 'contrast' van alpha channel vergroten -->
+          <feColorMatrix
+            mode="matrix"
+            values="
+                                 1  0  0  0  0
+                                 0  1  0  0  0
+                                 0  0  1  0  0
+                                 0  0  0  50  -24"
+            result="blob"
+          />
+
+          <!-- de blur mixen met de oorspronkelijke vorm -->
+          <feBlend in="SourceGraphic" in2="blob" />
         </filter>
       </defs>
     </svg>

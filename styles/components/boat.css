@@ -6,9 +6,9 @@ main > div:nth-of-type(2) {
   align-items: center;
   height: 100vh;
   width: 100vw;
+  transition: var(--transition-base);
 
   /* bootje container om te slepen */
-
   > div {
     overflow: hidden;
     padding: 0.5rem;
@@ -66,6 +66,10 @@ main > div:nth-of-type(2) {
       left: calc(50% + 0.1rem);
       animation: zeil-wapperen 8s infinite ease-in-out;
       transform-origin: left;
+
+      @media (min-width: 800px) {
+        animation: none;
+      }
     }
   }
 }
