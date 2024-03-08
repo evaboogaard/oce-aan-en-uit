@@ -97,6 +97,7 @@ dit ga ik dit weekend en volgende week doen. het is nu midden in de nacht en ik 
 - animation-composition
 - kleuren omzetten naar hsl
 - illustraties maken voor de dieren: 3 kleine visjes, 2 mid visjes, een schildpad, 2 diepzee vissen (met lampje!!!) en een zeester en een plankton.
-- scrolldriven: een anker dat naar beneden zakt, een vis die er door geraakt wordt????
-- een zeemijn????
+- scrolldriven: een anker dat naar beneden zakt, een vis die er door geraakt wordt???? (oke ook anker designen dan want dat ga je nu echt ff niet in css doen maatje)
+- een zeemijn???? explosies?!??!?!?!?!!!????!!!!
 - ijs knop maken, ik weet echt niet wat voor design
+- alien mannetje, astronautje, tikkertje-spelend? die sin / cosin nerd zooi gebruiken???????? (aan sanne vragen <3)
