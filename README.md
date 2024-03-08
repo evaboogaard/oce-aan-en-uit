@@ -42,6 +42,23 @@ ook heb ik d.m.v. de workshop svg filters elektriciteit kunnen nabootsen (waarva
 ![](./img/process/w2/elektriciteit.png)
 ![](./img/process/w2/elektriciteit_2.png)
 
+ik heb EINDELIJK aan de states gewerkt waar mijn control panel controle over heeft, de regen heb ik obv via Sanne the GOAT gefikst, verder gewoon beetje kleurtjes en transforms aangepast.
+![](./img/process/w2/regen-code.png)
+![](./img/process/w2/states-1.png)
+![](./img/process/w2/states-2.png)
+![](./img/process/w2/states-3.png)
+![](./img/process/w2/states-4.png)
+![](./img/process/w2/states-5.png)
+
+dit is de css structuur waar ik voor ben gegaan, ik heb geen idee of het een goede manier is maar it made sense to me dus het zal wel los lopen.
+![](./img/process/w2/structure.png)
+
+waar ik nu wel echt heel blij mee ben is het gebruik van custom properties. ik heb het idee dat alles een beeeeetje op zijn plek begint te vallen in mijn hoofd als het om CSS gaat. (al snap ik nog steeds niks van sinus en cosinus en alles dat met wiskunde te maken heeft)
+![](./img/process/w2/custom-properties.png)
+
+dit ga ik dit weekend en volgende week doen. het is nu midden in de nacht en ik kan niet stoppen met hierover na te denken. help.
+![](./img/process/w2/todo.png)
+
 ### week 3
 
 ## bronnenlijst
@@ -82,3 +99,4 @@ ook heb ik d.m.v. de workshop svg filters elektriciteit kunnen nabootsen (waarva
 - illustraties maken voor de dieren: 3 kleine visjes, 2 mid visjes, een schildpad, 2 diepzee vissen (met lampje!!!) en een zeester en een plankton.
 - scrolldriven: een anker dat naar beneden zakt, een vis die er door geraakt wordt????
 - een zeemijn????
+- ijs knop maken, ik weet echt niet wat voor design
