@@ -10,11 +10,21 @@ body:has(input[value='ijskoud']:checked) {
         transform: translateY(-25vh);
         scale: 0.6;
       }
+
+      s {
+        display: block;
+      }
     }
 
     /* bootje */
     > div:nth-of-type(2) {
       filter: brightness(1.3) grayscale(20%);
+    }
+
+    #anglerfish {
+      > g:nth-of-type(8) {
+        display: block;
+      }
     }
 
     @media (min-width: 800px) {

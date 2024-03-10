@@ -71,6 +71,10 @@ svg's zijn messy as hell
 ![](./img/process/w3/vis_1.png)
 ![](./img/process/w3/vis_2.png)
 
+meerdere states ??? leuk.
+![](./img/process/w3/vis_3.png)
+![](./img/process/w3/vis_4.png)
+
 ## bronnenlijst
 
 - https://www.w3schools.com/tags/att_form_action.asp
@@ -110,6 +114,7 @@ svg's zijn messy as hell
 - scrolldriven: een anker dat naar beneden zakt, een vis die er door geraakt wordt???? (oke ook anker designen dan want dat ga je nu echt ff niet in css doen maatje)
 - een zeemijn???? explosies?!??!?!?!?!!!????!!!!
 - ijs knop maken, ik weet echt niet wat voor design
-- alien mannetje, astronautje, tikkertje-spelend? die sin / cosin nerd zooi gebruiken???????? (aan sanne vragen <3)
+- alien mannetje, astronautje, tikkertje-spelend? die sin / cosin nerd zooi gebruiken???????? (aan sanne vragen??)
 - 'marine snow' of 'ocean dandruff' maken
 - zonnig: brouwers pilsie en zonnebril
+- https://stackoverflow.com/questions/39655289/css-based-on-data-name

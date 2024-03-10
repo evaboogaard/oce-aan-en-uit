@@ -213,3 +213,53 @@
     box-shadow: 0 0 1.5rem white;
   }
 }
+
+@keyframes shark-tail {
+  0% {
+    transform: rotateY(15deg);
+    filter: brightness(1.1);
+  }
+
+  100% {
+    transform: rotateY(-15deg);
+    filter: brightness(0.9);
+  }
+}
+
+@keyframes shark-fin {
+  0% {
+    transform: rotateX(-40deg);
+  }
+
+  100% {
+    transform: rotateX(40deg);
+  }
+}
+
+@keyframes lekker-zwemmen {
+  0% {
+    transform: translateX(-100vw) scaleX(-1);
+  }
+
+  50% {
+    transform: translateX(100vw) scaleX(-1);
+  }
+
+  51% {
+    transform: translateX(100vw) scaleX(1);
+  }
+
+  100% {
+    transform: translateX(-100vw) scaleX(1);
+  }
+}
+
+@keyframes lekker-drijven {
+  0% {
+    transform: scaleY(0.95);
+  }
+
+  100% {
+    transform: scaleY(1.05);
+  }
+}

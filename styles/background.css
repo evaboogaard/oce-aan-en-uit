@@ -209,6 +209,7 @@ main > div:first-of-type {
 
   /* sneeuw!!!!!!!!! */
   s {
+    display: none;
     position: absolute;
     width: 0.2rem;
     background-color: var(--snow-color);
@@ -216,8 +217,91 @@ main > div:first-of-type {
     border-radius: 50%;
     z-index: 100;
     top: 0;
-    box-shadow: 5vw 10vh var(--snow-color);
     border-radius: 50% 45% 60% 40% / 45% 30% 65% 55%;
+    animation: regenen 4s infinite linear;
+
+    &:first-of-type {
+      box-shadow:
+        5vw 10vh var(--snow-color),
+        6vw 2vh var(--snow-color),
+        10vw 30vh var(--snow-color),
+        15vw 40vh var(--snow-color),
+        20vw 48vh var(--snow-color),
+        15vw 30vh var(--snow-color),
+        25vw 20vh var(--snow-color),
+        30vw 15vh var(--snow-color),
+        35vw 25vh var(--snow-color),
+        40vw 5vh var(--snow-color),
+        45vw 35vh var(--snow-color),
+        50vw 12vh var(--snow-color),
+        18vw 22vh var(--snow-color),
+        22vw 8vh var(--snow-color),
+        33vw 18vh var(--snow-color),
+        38vw 45vh var(--snow-color),
+        70vw 40vh var(--snow-color),
+        80vw 20vh var(--snow-color),
+        90vw 25vh var(--snow-color),
+        95vw 10vh var(--snow-color),
+        100vw 30vh var(--snow-color);
+    }
+
+    &:nth-of-type(2) {
+      left: 5rem;
+      box-shadow:
+        3vw 15vh var(--snow-color),
+        8vw 5vh var(--snow-color),
+        12vw 35vh var(--snow-color),
+        28vw 10vh var(--snow-color),
+        40vw 42vh var(--snow-color),
+        17vw 28vh var(--snow-color),
+        23vw 18vh var(--snow-color),
+        32vw 27vh var(--snow-color),
+        37vw 12vh var(--snow-color),
+        42vw 3vh var(--snow-color),
+        50vw 33vh var(--snow-color),
+        10vw 20vh var(--snow-color),
+        25vw 8vh var(--snow-color),
+        34vw 17vh var(--snow-color),
+        39vw 45vh var(--snow-color),
+        70vw 38vh var(--snow-color),
+        80vw 22vh var(--snow-color),
+        90vw 29vh var(--snow-color),
+        95vw 14vh var(--snow-color),
+        99vw 32vh var(--snow-color),
+        1vw 1vh var(--snow-color),
+        60vw 25vh var(--snow-color);
+      animation-delay: -1.5s;
+    }
+
+    &:nth-of-type(3) {
+      left: 2rem;
+      box-shadow:
+        7vw 10vh var(--snow-color),
+        13vw 4vh var(--snow-color),
+        18vw 25vh var(--snow-color),
+        24vw 15vh var(--snow-color),
+        32vw 40vh var(--snow-color),
+        46vw 20vh var(--snow-color),
+        11vw 28vh var(--snow-color),
+        26vw 8vh var(--snow-color),
+        33vw 35vh var(--snow-color),
+        38vw 3vh var(--snow-color),
+        43vw 18vh var(--snow-color),
+        55vw 32vh var(--snow-color),
+        70vw 42vh var(--snow-color),
+        85vw 12vh var(--snow-color),
+        90vw 27vh var(--snow-color),
+        95vw 5vh var(--snow-color),
+        20vw 2vh var(--snow-color),
+        50vw 22vh var(--snow-color),
+        60vw 38vh var(--snow-color),
+        80vw 48vh var(--snow-color),
+        100vw 49vh var(--snow-color),
+        98vw 45vh var(--snow-color),
+        96vw 43vh var(--snow-color),
+        92vw 47vh var(--snow-color);
+      animation-delay: -3s;
+    }
   }
 }
 
@@ -232,4 +316,8 @@ main {
   );
 
   height: var(--ocean-height);
+}
+
+body {
+  overflow-x: hidden;
 }

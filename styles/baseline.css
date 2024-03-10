@@ -39,6 +39,7 @@
   --metal-color-darker: hsl(0, 0%, 38%);
 
   --shadow-color-base: hsla(0, 0%, 0%, 0.5);
+  --shadow-p: 80%;
 
   --low-opacity: 0.2;
 

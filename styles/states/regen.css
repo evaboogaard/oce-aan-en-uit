@@ -30,6 +30,12 @@ body:has(input[value='regen']:checked) {
       filter: brightness(0.8) hue-rotate(10deg);
     }
 
+    #anglerfish {
+      > g:nth-of-type(9) {
+        display: block;
+      }
+    }
+
     @media (min-width: 800px) {
       /* knop */
       nav form > div > div > div:first-of-type {

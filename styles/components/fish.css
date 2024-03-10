@@ -1,7 +1,8 @@
 :root {
-  --fish-primary-color: gold;
+  --fish-primary-color: yellow;
   --fish-primary-color-darker: gold;
   --fish-secondary-color: orange;
+  --fish-secondary-color-darker: darkorange;
   --fish-tertiary-color: red;
   --fish-teeth-color: white;
   --fish-eye-color: black;
@@ -12,6 +13,12 @@ path {
 }
 
 main {
+  /*
+###############
+          gewoon een visje
+###############
+*/
+
   #gewoon_een_visje {
     --fish-primary-color: #e5b651;
     --fish-primary-color-darker: #d5a144;
@@ -21,6 +28,7 @@ main {
     width: 6rem;
     right: 1rem;
     top: calc(var(--ocean-height) - 700vh);
+    animation: lekker-zwemmen 20s infinite linear;
 
     /* staart boven */
     > path:first-of-type {
@@ -57,6 +65,193 @@ main {
     }
   }
 
+  /*
+###############
+          tonijn
+###############
+*/
+
+  #tonijn {
+    --fish-primary-color: #5487c6;
+    --fish-primary-color-darker: #3f659e;
+    --fish-secondary-color: #c1e0e6;
+    --fish-secondary-color-darker: #81a1ae;
+    --fish-tertiary-color: #f4d384;
+
+    position: absolute;
+    width: 10rem;
+    right: 1rem;
+    top: calc(var(--ocean-height) - 600vh);
+    animation: lekker-zwemmen 30s infinite linear -5s;
+
+    /* staart onder */
+    > g:first-of-type {
+      fill: var(--fish-tertiary-color);
+    }
+
+    /* vinnen onder */
+    > g:nth-of-type(2) {
+      fill: var(--fish-tertiary-color);
+    }
+
+    /* staart boven */
+    > g:nth-of-type(3) {
+      fill: var(--fish-tertiary-color);
+    }
+
+    /* staart onder */
+    > g:nth-of-type(4) {
+      fill: var(--fish-tertiary-color);
+    }
+
+    /* lichaam */
+    > g:nth-of-type(5) {
+      fill: var(--fish-primary-color);
+
+      > g {
+        clip-path: url(#clippath);
+
+        > path {
+          fill: var(--fish-primary-color-darker);
+        }
+
+        > path:first-of-type {
+          fill: var(--fish-secondary-color);
+        }
+      }
+    }
+
+    /* textuurtje */
+    > g:nth-of-type(6) {
+      fill: var(--fish-secondary-color-darker);
+    }
+
+    /* oog */
+    > g:nth-of-type(7) {
+      fill: var(--fish-eye-color);
+    }
+  }
+
+  /*
+###############
+          kwal
+###############
+*/
+
+  #kwal {
+    --fish-primary-color: #b3c8d0;
+    --fish-primary-color-darker: #88a1aa;
+    --fish-secondary-color: #a3c9d9;
+
+    position: absolute;
+    width: 13rem;
+    right: 1rem;
+    top: calc(var(--ocean-height) - 400vh);
+    animation: lekker-drijven 2s infinite ease-in-out alternate;
+
+    /* tentakels */
+    > g:first-of-type {
+      > path:first-of-type {
+        fill: var(--fish-primary-color);
+      }
+
+      > path:nth-of-type(2),
+      > path:nth-of-type(3) {
+        fill: var(--fish-secondary-color);
+      }
+
+      > path:nth-of-type(4),
+      > path:nth-of-type(5) {
+        fill: var(--fish-primary-color-darker);
+      }
+    }
+
+    /* lichaam */
+    > g:nth-of-type(2) {
+      > path:first-of-type {
+        fill: var(--fish-secondary-color);
+      }
+
+      > path:last-of-type {
+        fill: var(--fish-secondary-color);
+        opacity: 0.7;
+      }
+    }
+
+    /* ogen */
+    > g:nth-of-type(3) {
+      fill: var(--fish-eye-color);
+    }
+
+    /* hoedje */
+    > g:nth-of-type(4) {
+      fill: url(#radial-gradient);
+    }
+  }
+
+  /*
+###############
+          shark
+###############
+*/
+
+  #shark {
+    --fish-primary-color: #949a9a;
+    --fish-secondary-color: #bbbfbf;
+    --fish-teeth-color: #fff;
+
+    position: absolute;
+    width: 23rem;
+    right: 1rem;
+    top: calc(var(--ocean-height) - 500vh);
+    animation: lekker-zwemmen 22s infinite linear -12s;
+
+    /* tandjes */
+    > g:first-of-type {
+      fill: var(--fish-teeth-color);
+    }
+
+    /* lichaam */
+    > g:nth-of-type(2) {
+      > path {
+        fill: var(--fish-primary-color);
+      }
+      > g {
+        clip-path: url(#clippath-1);
+
+        > path {
+          fill: var(--fish-secondary-color);
+        }
+      }
+    }
+
+    /* vin */
+    > g:nth-of-type(3) {
+      fill: var(--fish-primary-color);
+      filter: drop-shadow(0 0.5rem 0.25rem hsla(0, 0%, 0%, var(--shadow-p)));
+      transform-origin: center;
+      animation: shark-fin 2.5s infinite alternate ease-in-out;
+    }
+
+    /* staart */
+    > g:nth-of-type(4) {
+      fill: var(--fish-primary-color);
+      transform-origin: center;
+      animation: shark-tail 1.5s infinite alternate ease-in-out;
+    }
+
+    /* oog */
+    > g:nth-of-type(5) {
+      fill: var(--fish-eye-color);
+    }
+  }
+
+  /*
+###############
+          anglerfish
+###############
+*/
+
   #anglerfish {
     --fish-primary-color: hsl(30, 43%, 30%);
     --fish-primary-color-darker: hsl(31, 45%, 24%);
@@ -67,53 +262,86 @@ main {
     width: 10rem;
     right: 1rem;
     top: calc(var(--ocean-height) - 50vh);
+    animation: lekker-zwemmen 25s infinite linear -17s;
 
-    > g {
-      /* tanden */
-      > g:first-of-type {
+    /* tanden */
+    > g:first-of-type {
+      > path {
+        fill: var(--fish-teeth-color);
+      }
+    }
+
+    /* staart */
+    > g:nth-of-type(2) {
+      fill: var(--fish-secondary-color);
+    }
+
+    /* lichaam */
+    > g:nth-of-type(3) {
+      fill: var(--fish-primary-color);
+    }
+
+    /* stokje */
+    > g:nth-of-type(4) {
+      fill: var(--fish-primary-color);
+    }
+
+    /* lampje */
+    > g:nth-of-type(5) {
+      fill: var(--fish-secondary-color);
+    }
+
+    /* vin */
+    > g:nth-of-type(6) {
+      > path {
+        fill: var(--fish-primary-color-darker);
+      }
+
+      > g {
+        clip-path: url(#clippath);
+
         > path {
-          fill: var(--fish-teeth-color);
+          fill: var(--fish-secondary-color);
         }
       }
+    }
 
-      /* staart */
-      > g:nth-of-type(2) {
-        fill: var(--fish-secondary-color);
+    /* oog */
+    > g:nth-of-type(7) {
+      fill: var(--fish-eye-color);
+    }
+
+    /* winter state */
+    > g:nth-of-type(8) {
+      display: none;
+
+      > path:first-of-type {
+        fill: pink;
       }
 
-      /* lichaam */
-      > g:nth-of-type(3) {
-        fill: var(--fish-primary-color);
+      > path:nth-of-type(2) {
+        fill: #f09;
       }
 
-      /* stokje */
-      > g:nth-of-type(4) {
-        fill: var(--fish-primary-color);
+      > path:nth-of-type(3) {
+        fill: #f09;
+      }
+    }
+
+    /* regen state */
+    > g:nth-of-type(9) {
+      display: none;
+
+      > path:first-of-type {
+        fill: yellow;
       }
 
-      /* lampje */
-      > g:nth-of-type(5) {
-        fill: var(--fish-secondary-color);
+      > path:nth-of-type(2) {
+        fill: gold;
       }
 
-      /* vin */
-      > g:nth-of-type(6) {
-        > path {
-          fill: var(--fish-primary-color-darker);
-        }
-
-        > g {
-          clip-path: url(#clippath);
-
-          > path {
-            fill: var(--fish-secondary-color);
-          }
-        }
-      }
-
-      /* oog */
-      > g:nth-of-type(7) {
-        fill: var(--fish-eye-color);
+      > path:nth-of-type(3) {
+        fill: yellow;
       }
     }
   }
