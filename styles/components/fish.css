@@ -1,0 +1,120 @@
+:root {
+  --fish-primary-color: gold;
+  --fish-primary-color-darker: gold;
+  --fish-secondary-color: orange;
+  --fish-tertiary-color: red;
+  --fish-teeth-color: white;
+  --fish-eye-color: black;
+}
+
+path {
+  stroke-width: 0px;
+}
+
+main {
+  #gewoon_een_visje {
+    --fish-primary-color: #e5b651;
+    --fish-primary-color-darker: #d5a144;
+    --fish-secondary-color: #e8dfab;
+
+    position: absolute;
+    width: 6rem;
+    right: 1rem;
+    top: calc(var(--ocean-height) - 700vh);
+
+    /* staart boven */
+    > path:first-of-type {
+      fill: var(--fish-secondary-color);
+    }
+
+    /* staart onder */
+    > path:nth-of-type(2) {
+      fill: var(--fish-secondary-color);
+    }
+
+    /* vin boven */
+    > path:nth-of-type(3) {
+      fill: var(--fish-secondary-color);
+    }
+
+    /* vin onder */
+    > path:nth-of-type(4) {
+      fill: var(--fish-secondary-color);
+    }
+
+    /* lichaam */
+    > path:nth-of-type(5) {
+      fill: var(--fish-primary-color);
+    }
+
+    /* textuurtje */
+    > g {
+      fill: var(--fish-primary-color-darker);
+
+      > g {
+        fill: var(--fish-eye-color);
+      }
+    }
+  }
+
+  #anglerfish {
+    --fish-primary-color: hsl(30, 43%, 30%);
+    --fish-primary-color-darker: hsl(31, 45%, 24%);
+    --fish-secondary-color: hsl(51, 50%, 77%);
+    --fish-teeth-color: #d8c6a4;
+
+    position: absolute;
+    width: 10rem;
+    right: 1rem;
+    top: calc(var(--ocean-height) - 50vh);
+
+    > g {
+      /* tanden */
+      > g:first-of-type {
+        > path {
+          fill: var(--fish-teeth-color);
+        }
+      }
+
+      /* staart */
+      > g:nth-of-type(2) {
+        fill: var(--fish-secondary-color);
+      }
+
+      /* lichaam */
+      > g:nth-of-type(3) {
+        fill: var(--fish-primary-color);
+      }
+
+      /* stokje */
+      > g:nth-of-type(4) {
+        fill: var(--fish-primary-color);
+      }
+
+      /* lampje */
+      > g:nth-of-type(5) {
+        fill: var(--fish-secondary-color);
+      }
+
+      /* vin */
+      > g:nth-of-type(6) {
+        > path {
+          fill: var(--fish-primary-color-darker);
+        }
+
+        > g {
+          clip-path: url(#clippath);
+
+          > path {
+            fill: var(--fish-secondary-color);
+          }
+        }
+      }
+
+      /* oog */
+      > g:nth-of-type(7) {
+        fill: var(--fish-eye-color);
+      }
+    }
+  }
+}

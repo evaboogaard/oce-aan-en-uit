@@ -94,6 +94,47 @@
   }
 }
 
+@keyframes bliksem {
+  0% {
+    filter: url('#squiggly-0');
+  }
+  5% {
+    filter: url('#squiggly-1');
+  }
+  10% {
+    filter: url('#squiggly-2');
+  }
+  15% {
+    filter: url('#squiggly-3');
+  }
+  20% {
+    filter: url('#squiggly-4');
+  }
+  25% {
+    filter: url('#squiggly-0');
+  }
+  30% {
+    filter: url('#squiggly-1');
+  }
+  35% {
+    filter: url('#squiggly-2');
+  }
+  40% {
+    filter: url('#squiggly-3');
+  }
+  45% {
+    filter: url('#squiggly-4');
+  }
+
+  46% {
+    display: none;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
 /* scroll animations!! */
 @keyframes donker-naar-licht {
   0% {

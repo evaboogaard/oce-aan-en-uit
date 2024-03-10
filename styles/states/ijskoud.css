@@ -1,26 +1,28 @@
 body:has(input[value='ijskoud']:checked) {
-  /* lucht */
-  main > div:first-of-type {
-    --lucht-dark-color: #addfeb;
-    --lucht-light-color: #dbf5fb;
+  main {
+    /* lucht */
+    > div:first-of-type {
+      --lucht-dark-color: #addfeb;
+      --lucht-light-color: #dbf5fb;
 
-    > span:first-of-type {
-      --sun-color: #ffffff;
-      transform: translateY(-15vh);
-      scale: 0.6;
+      > span:first-of-type {
+        --sun-color: #ffffff;
+        transform: translateY(-25vh);
+        scale: 0.6;
+      }
     }
-  }
 
-  /* bootje */
-  main > div:nth-of-type(2) {
-    filter: brightness(1.3) grayscale(20%);
-  }
+    /* bootje */
+    > div:nth-of-type(2) {
+      filter: brightness(1.3) grayscale(20%);
+    }
 
-  @media (min-width: 800px) {
-    /* knop */
-    main nav form > div > div > div:nth-of-type(3) {
-      background-color: #e08aff;
-      animation: knopje-gloeit 1s infinite ease-in-out alternate;
+    @media (min-width: 800px) {
+      /* knop */
+      nav form > div > div > div:nth-of-type(3) {
+        background-color: #e08aff;
+        animation: knopje-gloeit 1s infinite ease-in-out alternate;
+      }
     }
   }
 }

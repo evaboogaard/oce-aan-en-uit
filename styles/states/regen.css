@@ -1,59 +1,61 @@
 body:has(input[value='regen']:checked) {
-  /* lucht */
-  main > div:first-of-type {
-    --lucht-dark-color: #335169;
-    --lucht-light-color: #2e3c47;
+  main {
+    /* lucht */
+    > div:first-of-type {
+      --lucht-dark-color: #335169;
+      --lucht-light-color: #2e3c47;
 
-    /* zonnetje */
-    > span:first-of-type {
-      transform: translateY(50vh);
+      /* zonnetje */
+      > span:first-of-type {
+        transform: translateY(50vh);
+      }
+
+      /* wolkjes */
+
+      > span:nth-of-type(2),
+      > span:nth-of-type(3) {
+        --cloud-color: #8a8a8a;
+        transform: translateY(0);
+      }
+
+      > span:nth-of-type(4),
+      > span:nth-of-type(5),
+      > span:nth-of-type(6) {
+        display: block;
+      }
     }
 
-    /* wolkjes */
-
-    > span:nth-of-type(2),
-    > span:nth-of-type(3) {
-      --cloud-color: #8a8a8a;
-      transform: translateY(0);
+    /* bootje */
+    > div:nth-of-type(2) {
+      filter: brightness(0.8) hue-rotate(10deg);
     }
 
-    > span:nth-of-type(4),
-    > span:nth-of-type(5),
-    > span:nth-of-type(6) {
-      display: block;
-    }
-  }
+    @media (min-width: 800px) {
+      /* knop */
+      nav form > div > div > div:first-of-type {
+        filter: brightness(1.1);
+        animation: knopje-gloeit 1s infinite ease-in-out alternate;
 
-  /* bootje */
-  main > div:nth-of-type(2) {
-    filter: brightness(0.8) hue-rotate(10deg);
-  }
+        span {
+          span:first-of-type {
+            animation: bubbel-knop 10s infinite linear;
+          }
 
-  @media (min-width: 800px) {
-    /* knop */
-    main nav form > div > div > div:first-of-type {
-      filter: brightness(1.1);
-      animation: knopje-gloeit 1s infinite ease-in-out alternate;
+          span:nth-of-type(2) {
+            animation: bubbel-knop 6s infinite -1s linear;
+          }
 
-      span {
-        span:first-of-type {
-          animation: bubbel-knop 10s infinite linear;
-        }
+          span:nth-of-type(3) {
+            animation: bubbel-knop 8s infinite linear;
+          }
 
-        span:nth-of-type(2) {
-          animation: bubbel-knop 6s infinite -1s linear;
-        }
+          span:nth-of-type(4) {
+            animation: bubbel-knop 4s infinite -0.5s linear;
+          }
 
-        span:nth-of-type(3) {
-          animation: bubbel-knop 8s infinite linear;
-        }
-
-        span:nth-of-type(4) {
-          animation: bubbel-knop 4s infinite -0.5s linear;
-        }
-
-        span:nth-of-type(5) {
-          animation: bubbel-knop 10s infinite -1s linear;
+          span:nth-of-type(5) {
+            animation: bubbel-knop 10s infinite -1s linear;
+          }
         }
       }
     }

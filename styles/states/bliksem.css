@@ -1,43 +1,49 @@
 body:has(input[value='bliksem']:checked) {
   --lucht-dark-color: #0b0e17;
   --lucht-light-color: #1f2438;
-  /* lucht */
-  main > div:first-of-type {
-    > span:first-of-type {
-      --sun-color: #f4fcff;
-    }
 
-    > span:nth-of-type(2),
-    > span:nth-of-type(3) {
-      --cloud-color: var(--thunder-cloud-color);
-      transform: translateY(0) scale(0.9);
-
-      @media (min-width: 600px) {
-        transform: translateY(0) scale(1.1);
+  main {
+    /* lucht */
+    > div:first-of-type {
+      > span:first-of-type {
+        --sun-color: #f4fcff;
       }
 
-      @media (min-width: 800px) {
-        transform: translateY(0) scale(1.4);
+      > span:nth-of-type(2),
+      > span:nth-of-type(3) {
+        --cloud-color: var(--thunder-cloud-color);
+        transform: translateY(0) scale(0.9);
+
+        @media (min-width: 600px) {
+          transform: translateY(0) scale(1.1);
+        }
+
+        @media (min-width: 800px) {
+          transform: translateY(0) scale(1.4);
+        }
+
+        l {
+          opacity: 1;
+        }
       }
     }
-  }
+    /* bootje */
+    > div:nth-of-type(2) {
+      filter: brightness(0.6) hue-rotate(10deg);
+    }
 
-  /* bootje */
-  main > div:nth-of-type(2) {
-    filter: brightness(0.6) hue-rotate(10deg);
-  }
+    @media (min-width: 800px) {
+      /* knop */
+      nav form > div > div > div:nth-of-type(2) {
+        background: radial-gradient(
+          var(--lucht-light-color),
+          var(--lucht-dark-color)
+        );
+        animation: knopje-gloeit 1s infinite ease-in-out alternate;
 
-  @media (min-width: 800px) {
-    /* knop */
-    main nav form > div > div > div:nth-of-type(2) {
-      background: radial-gradient(
-        var(--lucht-light-color),
-        var(--lucht-dark-color)
-      );
-      animation: knopje-gloeit 1s infinite ease-in-out alternate;
-
-      & b {
-        transform: scaleY(1);
+        & b {
+          transform: scaleY(1);
+        }
       }
     }
   }

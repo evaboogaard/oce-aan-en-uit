@@ -12,6 +12,7 @@
   --ocean-color: hsl(213, 65%, 44%);
   --ocean-color-darker: hsl(213, 100%, 26%);
   --ocean-color-dark: hsl(213, 100%, 17%);
+  --ocean-height: 800vh;
 
   --lucht-light-color: hsl(51, 100%, 50%);
   --lucht-dark-color: hsl(25, 75%, 47%);
@@ -22,6 +23,7 @@
   --thunder-cloud-color: hsl(0, 0%, 0%);
 
   --rain-color: hsl(208, 100%, 66%);
+  --snow-color: hsl(0, 0%, 100%);
 
   --boat-primary-color: hsl(0, 70%, 42%);
   --boat-secondary-color: hsl(0, 0%, 100%);

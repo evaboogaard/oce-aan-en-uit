@@ -61,6 +61,16 @@ dit ga ik dit weekend en volgende week doen. het is nu midden in de nacht en ik 
 
 ### week 3
 
+ik ben begonnen met schetsen wat ik deze week sowieso wil visualiseren, t lijkt me cool als het schip gaat veranderen in een piratenschip als het heel groot wordt. ook moet ik nog iets voor de vriesknop bedenken.
+![](./img/process/w3/schets_1.jpg)
+
+en dit zijn mijn schetsen voor het zeeleven. ik wil nog meer diepzee vissen.
+![](./img/process/w3/schets_2.jpg)
+
+svg's zijn messy as hell
+![](./img/process/w3/vis_1.png)
+![](./img/process/w3/vis_2.png)
+
 ## bronnenlijst
 
 - https://www.w3schools.com/tags/att_form_action.asp
@@ -101,3 +111,5 @@ dit ga ik dit weekend en volgende week doen. het is nu midden in de nacht en ik 
 - een zeemijn???? explosies?!??!?!?!?!!!????!!!!
 - ijs knop maken, ik weet echt niet wat voor design
 - alien mannetje, astronautje, tikkertje-spelend? die sin / cosin nerd zooi gebruiken???????? (aan sanne vragen <3)
+- 'marine snow' of 'ocean dandruff' maken
+- zonnig: brouwers pilsie en zonnebril
