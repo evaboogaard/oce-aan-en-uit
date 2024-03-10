@@ -8,6 +8,7 @@
 @import 'styles/components/controlpanel.css';
 @import 'styles/components/boat.css';
 @import 'styles/components/fish.css';
+@import 'styles/components/sea.css';
 
 /* weather states */
 @import 'styles/states/ijskoud.css';

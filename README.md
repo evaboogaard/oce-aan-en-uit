@@ -104,6 +104,7 @@ meerdere states ??? leuk.
 - https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
 - https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
 - https://www.w3schools.com/cssref/css_animatable.php
+- https://www.w3schools.com/howto/howto_css_flip_image.asp
 
 ## to do
 

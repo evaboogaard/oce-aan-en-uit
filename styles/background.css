@@ -316,6 +316,7 @@ main {
   );
 
   height: var(--ocean-height);
+  overflow-x: hidden;
 }
 
 body {

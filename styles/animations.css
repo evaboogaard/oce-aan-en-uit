@@ -184,6 +184,18 @@
   }
 }
 
+@keyframes marine-snow {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-50vh);
+    opacity: 0;
+  }
+}
+
 @keyframes zonnetje-inner-pulse {
   from {
     scale: 1.3;
