@@ -109,6 +109,9 @@ meerdere states ??? leuk.
 - https://stackoverflow.com/questions/39655289/css-based-on-data-name
 - https://www.transparenttextures.com/wood-pattern.html
 - https://en.wikipedia.org/wiki/DCI-P3
+- https://jenkov.com/tutorials/svg/use-element.html
+- https://codepen.io/shooft/pen/MWRyqNy
+- https://stackoverflow.com/questions/3859101/what-does-ahref-do-in-css
 
 ## to do
 

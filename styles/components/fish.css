@@ -64,6 +64,10 @@ main {
     right: 1rem;
     top: calc(var(--ocean-height) - 700vh);
     animation: lekker-zwemmen 20s infinite linear -20s;
+
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 
   /*
@@ -133,6 +137,10 @@ main {
     right: 1rem;
     top: calc(var(--ocean-height) - 600vh);
     animation: lekker-zwemmen 30s infinite linear -5s;
+
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 
   /*
@@ -251,6 +259,10 @@ main {
     right: 1rem;
     top: calc(var(--ocean-height) - 500vh);
     animation: lekker-zwemmen 22s infinite linear -12s;
+
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 
   /*
@@ -290,6 +302,10 @@ main {
     /* lampje */
     > g:nth-of-type(5) {
       fill: var(--fish-secondary-color);
+
+      > path {
+        animation: gloeien 1s infinite alternate;
+      }
     }
 
     /* vin */
@@ -353,8 +369,17 @@ main {
     right: 1rem;
     top: calc(var(--ocean-height) - 50vh);
     animation: lekker-zwemmen 25s infinite linear -17s;
+
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 
+  /*
+###############
+         turtle
+###############
+*/
   #turtle {
     --fish-primary-color: #55ab45;
     --fish-primary-color-darker: #3a8d35;
@@ -448,8 +473,17 @@ main {
     right: 1rem;
     top: calc(var(--ocean-height) - 650vh);
     animation: lekker-zwemmen 25s infinite linear -21s;
+
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 
+  /*
+###############
+          plankton
+###############
+*/
   #plankton {
     --fish-primary-color: #d6c5b5;
     --fish-primary-color-darker: #1d1d1b;
