@@ -254,11 +254,11 @@
   }
 
   50% {
-    transform: translateX(100vw) scaleX(-1);
+    transform: translateX(50vw) scaleX(-1);
   }
 
   51% {
-    transform: translateX(100vw) scaleX(1);
+    transform: translateX(50vw) scaleX(1);
   }
 
   100% {
@@ -273,5 +273,31 @@
 
   100% {
     transform: scaleY(1.05);
+  }
+}
+
+@keyframes schildpad-vin-voor {
+  0% {
+    transform: rotateX(-40deg);
+    filter: brightness(0.9);
+  }
+
+  50% {
+    filter: brightness(1);
+  }
+
+  100% {
+    transform: rotateX(40deg);
+    filter: brightness(0.9);
+  }
+}
+
+@keyframes schildpad-vin-achter {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-4deg);
   }
 }

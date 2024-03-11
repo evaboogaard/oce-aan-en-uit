@@ -105,17 +105,20 @@ meerdere states ??? leuk.
 - https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
 - https://www.w3schools.com/cssref/css_animatable.php
 - https://www.w3schools.com/howto/howto_css_flip_image.asp
+- https://www.digitalocean.com/community/tutorials/how-to-change-a-css-background-images-opacity
+- https://stackoverflow.com/questions/39655289/css-based-on-data-name
+- https://www.transparenttextures.com/wood-pattern.html
+- https://en.wikipedia.org/wiki/DCI-P3
 
 ## to do
 
-- kijken naar linear timing function bramus developer.chrome, linear() generator
-- animation-composition
-- kleuren omzetten naar hsl
+- kijken naar linear timing function bramus developer.chrome, linear() generator. bouncy stuff. don't know if needed.
+- animation-composition cool? animaties combineren?
+- kleuren omzetten naar hsl, ff vragen hoe en wat
 - illustraties maken voor de dieren: 3 kleine visjes, 2 mid visjes, een schildpad, 2 diepzee vissen (met lampje!!!) en een zeester en een plankton.
 - scrolldriven: een anker dat naar beneden zakt, een vis die er door geraakt wordt???? (oke ook anker designen dan want dat ga je nu echt ff niet in css doen maatje)
 - een zeemijn???? explosies?!??!?!?!?!!!????!!!!
 - ijs knop maken, ik weet echt niet wat voor design
 - alien mannetje, astronautje, tikkertje-spelend? die sin / cosin nerd zooi gebruiken???????? (aan sanne vragen??)
-- 'marine snow' of 'ocean dandruff' maken
-- zonnig: brouwers pilsie en zonnebril
-- https://stackoverflow.com/questions/39655289/css-based-on-data-name
+- marine snow maken
+- zonnig: brouwers pilsie en zonnebril? of zonnig base state?
