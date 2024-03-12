@@ -146,24 +146,6 @@
   }
 }
 
-/* @keyframes klein-wolkje-regent {
-  0% {
-    transform: scaleY(1) translateZ(-1rem) translateY(0rem);
-  }
-
-  40% {
-    transform: scaleY(1) translateZ(-1rem) translateY(4rem);
-  }
-
-  70% {
-    transform: scaleY(0) translateZ(-1rem) translateY(4rem);
-  }
-
-  100% {
-    transform: scaleY(0) translateZ(-1rem) translateY(4rem);
-  }
-} */
-
 @keyframes klein-wolkje-regent {
   0% {
     transform: scaleY(1) translateZ(-1rem);

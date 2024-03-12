@@ -43,7 +43,11 @@ body:has(input[value='bliksem']:checked) {
           var(--lucht-light-color),
           var(--lucht-dark-color)
         );
-        animation: knopje-gloeit 1s infinite ease-in-out alternate;
+        animation: knopje-gloeit 1s infinite ease-in-out alternate paused;
+
+        @media (prefers-reduced-motion: no-preference) {
+          animation-play-state: running;
+        }
 
         & b {
           transform: scaleY(1);

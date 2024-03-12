@@ -92,10 +92,13 @@ main nav {
             aspect-ratio: 1;
             width: 7rem;
             backdrop-filter: blur(5px) brightness(1.1);
-            transition: var(--transition-slower);
             animation: donker-naar-licht;
             animation-timeline: scroll(root);
             animation-duration: auto;
+
+            @media (prefers-reduced-motion: no-preference) {
+              transition: var(--transition-slower);
+            }
 
             @media (min-width: 800px) {
               animation: none;
@@ -118,9 +121,12 @@ main nav {
                 border-radius: 50%;
                 left: 1.25rem;
                 top: 2rem;
-                transition: var(--transition-slower);
                 scale: 0.9;
                 transform-style: preserve-3d;
+
+                @media (prefers-reduced-motion: no-preference) {
+                  transition: var(--transition-slower);
+                }
 
                 @media (min-width: 800px) {
                   display: none;
@@ -131,7 +137,10 @@ main nav {
                   aspect-ratio: 2/1;
                   position: absolute;
                   border-radius: 50%;
-                  transition: var(--transition-slower);
+
+                  @media (prefers-reduced-motion: no-preference) {
+                    transition: var(--transition-slower);
+                  }
                 }
 
                 &::before {
@@ -196,7 +205,10 @@ main nav {
                   background-color: var(--sun-color);
                   opacity: 0.4;
                   transform: translateZ(-1rem);
-                  transition: var(--transition-base);
+
+                  @media (prefers-reduced-motion: no-preference) {
+                    transition: var(--transition-base);
+                  }
                 }
 
                 &::before {
@@ -208,14 +220,24 @@ main nav {
                 }
 
                 &:hover {
+                  --zon-animatie-properties: 1s infinite alternate ease-in-out
+                    paused;
+
                   &::before {
-                    animation: zonnetje-inner-pulse 1s infinite alternate
-                      ease-in-out;
+                    animation: zonnetje-inner-pulse
+                      var(--zon-animatie-properties);
                   }
 
                   &::after {
-                    animation: zonnetje-outer-pulse 1s infinite alternate
-                      ease-in-out;
+                    animation: zonnetje-outer-pulse
+                      var(--zon-animatie-properties);
+                  }
+
+                  @media (prefers-reduced-motion: no-preference) {
+                    &::before,
+                    &::after {
+                      animation-play-state: running;
+                    }
                   }
                 }
               }
@@ -245,7 +267,6 @@ main nav {
                 height: 1.2rem;
                 top: 0.5rem;
                 transform: rotateX(10deg);
-                transition: var(--transition-base);
                 background: linear-gradient(
                   var(--steampunk-button-primary-color) 0 50%,
                   var(--steampunk-button-secondary-color) 50% 100%
@@ -254,6 +275,10 @@ main nav {
                 outline: 2px solid var(--steampunk-button-primary-color);
                 border-top: 2px solid var(--steampunk-button-primary-color);
                 border-bottom: 1px solid var(--steampunk-button-primary-color);
+
+                @media (prefers-reduced-motion: no-preference) {
+                  transition: var(--transition-base);
+                }
               }
 
               &::after {
@@ -266,7 +291,10 @@ main nav {
                 transform: rotateX(110deg);
                 background-color: var(--steampunk-button-primary-color);
                 filter: brightness(0.8);
-                transition: var(--transition-base);
+
+                @media (prefers-reduced-motion: no-preference) {
+                  transition: var(--transition-base);
+                }
               }
             }
           }
@@ -375,7 +403,10 @@ main nav {
 
           top: 0;
           right: 5rem;
-          transition: var(--transition-slower);
+
+          @media (prefers-reduced-motion: no-preference) {
+            transition: var(--transition-slower);
+          }
 
           &::before,
           &::after {
@@ -429,7 +460,10 @@ main nav {
             height: 30%;
             position: absolute;
             animation: elektriciteit-filter 0.5s infinite;
-            transition: var(--transition-slower);
+
+            @media (prefers-reduced-motion: no-preference) {
+              transition: var(--transition-slower);
+            }
 
             &::before,
             &::after {
@@ -691,10 +725,13 @@ main nav {
       top: -5rem;
       background-color: rgba(0, 0, 0, var(--low-opacity));
       border-radius: 0.25rem;
-      transition: var(--transition-base);
       animation: donker-naar-licht;
       animation-timeline: scroll(root);
       animation-duration: auto;
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: var(--transition-base);
+      }
 
       &:hover {
         --low-opacity: 0.3;
@@ -711,8 +748,11 @@ main nav {
         width: 100%;
         height: 100%;
         position: absolute;
-        transition: var(--transition-base);
         cursor: pointer;
+
+        @media (prefers-reduced-motion: no-preference) {
+          transition: var(--transition-base);
+        }
 
         @media (min-width: 800px) {
           rotate: -90deg;

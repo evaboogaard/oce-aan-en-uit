@@ -112,6 +112,7 @@ meerdere states ??? leuk.
 - https://jenkov.com/tutorials/svg/use-element.html
 - https://codepen.io/shooft/pen/MWRyqNy
 - https://stackoverflow.com/questions/3859101/what-does-ahref-do-in-css
+- https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state?retiredLocale=nl
 
 ## to do
 

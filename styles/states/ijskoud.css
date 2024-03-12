@@ -31,7 +31,11 @@ body:has(input[value='ijskoud']:checked) {
       /* knop */
       nav form > div > div > div:nth-of-type(3) {
         background-color: #e08aff;
-        animation: knopje-gloeit 1s infinite ease-in-out alternate;
+        animation: knopje-gloeit 1s infinite ease-in-out alternate paused;
+
+        @media (prefers-reduced-motion: no-preference) {
+          animation-play-state: running;
+        }
       }
     }
   }

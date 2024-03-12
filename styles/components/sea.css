@@ -1,10 +1,67 @@
+body {
+  overflow-x: hidden;
+}
+
 main {
-  div:last-of-type {
+  /* oceaan kleurtje */
+
+  background: linear-gradient(
+    in okLCH,
+    var(--ocean-color) 0 10%,
+    var(--ocean-color-darker),
+    var(--ocean-color-dark),
+    black 70%
+  );
+
+  height: var(--ocean-height);
+  overflow-x: hidden;
+
+  > div:nth-of-type(3) {
+    z-index: -1;
+    height: 20vh;
+    width: 200vw;
+    transform: translateY(19.5vh);
+    background-image: radial-gradient(
+      in okLCH,
+      var(--ocean-color) 10%,
+      var(--ocean-color-lighter) 10% 12%,
+      var(--ocean-color) 15%,
+      var(--ocean-color-lighter) 15% 17%,
+      var(--ocean-color) 20%,
+      var(--ocean-color-lighter) 20% 23%,
+      var(--ocean-color) 27%,
+      var(--ocean-color-lighter) 27% 32%,
+      var(--ocean-color) 38%,
+      var(--ocean-color-lighter) 38% 41%,
+      var(--ocean-color) 50%,
+      var(--ocean-color-lighter) 50% 55%,
+      var(--ocean-color) 65%
+    );
+    background-size: 80% 200%;
+    background-position: -75% 100%;
+    background-repeat: no-repeat;
+
+    mask-image: radial-gradient(red 70%, transparent 0);
+    mask-size: 80% 200%;
+    mask-position: -75% 100%;
+
+    @media (min-width: 800px) {
+      width: 100vw;
+      background-position: 50% 100%;
+      mask-position: 50% 100%;
+    }
+  }
+
+  > div:last-of-type {
     /* sneeuw!!!!!!!!! */
     s {
       width: 0.1rem;
       top: calc(var(--ocean-height) - 40vh);
-      animation: marine-snow 9s infinite linear;
+      animation: marine-snow 9s infinite linear paused;
+
+      @media (prefers-reduced-motion: no-preference) {
+        animation-play-state: running;
+      }
 
       &:nth-of-type(2) {
         animation-delay: -3s;

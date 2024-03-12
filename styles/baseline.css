@@ -10,6 +10,8 @@
   --steampunk-button-secondary-color: hsl(28, 85%, 13%);
 
   --ocean-color: hsl(213, 65%, 44%);
+  --ocean-color-lighter: hsl(213, 65%, 48%);
+
   --ocean-color-darker: hsl(213, 100%, 26%);
   --ocean-color-dark: hsl(213, 100%, 17%);
   --ocean-height: 800vh;

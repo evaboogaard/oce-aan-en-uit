@@ -40,27 +40,45 @@ body:has(input[value='regen']:checked) {
       /* knop */
       nav form > div > div > div:first-of-type {
         filter: brightness(1.1);
-        animation: knopje-gloeit 1s infinite ease-in-out alternate;
+        animation: knopje-gloeit 1s infinite ease-in-out alternate paused;
+
+        @media (prefers-reduced-motion: no-preference) {
+          animation-play-state: running;
+        }
 
         span {
+          span {
+            animation: bubbel-knop var(--duration, 6s) infinite linear
+              var(--delay, -2s) paused;
+
+            @media (prefers-reduced-motion: no-preference) {
+              animation-play-state: running;
+            }
+          }
+
           span:first-of-type {
-            animation: bubbel-knop 10s infinite linear;
+            --duration: 10s;
+            --delay: 0s;
           }
 
           span:nth-of-type(2) {
-            animation: bubbel-knop 6s infinite -1s linear;
+            --duration: 6s;
+            --delay: -1s;
           }
 
           span:nth-of-type(3) {
-            animation: bubbel-knop 8s infinite linear;
+            --duration: 8s;
+            --delay: 0s;
           }
 
           span:nth-of-type(4) {
-            animation: bubbel-knop 4s infinite -0.5s linear;
+            --duration: 4s;
+            --delay: -0.5s;
           }
 
           span:nth-of-type(5) {
-            animation: bubbel-knop 10s infinite -1s linear;
+            --duration: 10s;
+            --delay: -1s;
           }
         }
       }
