@@ -397,6 +397,7 @@ main nav {
           aspect-ratio: 1;
           border-radius: 50%;
           background: radial-gradient(
+            in okLCH,
             hsl(0, 0%, 80%, 0.5),
             hsla(0, 0%, 30%, 0.5)
           );
@@ -415,7 +416,8 @@ main nav {
             position: absolute;
             width: 5rem;
             background: linear-gradient(
-              90deg,
+              90deg in okLCH,
+
               var(--metal-color) 23%,
               var(--metal-color-lighter) 23% 77%,
               var(--metal-color) 77%
@@ -459,7 +461,7 @@ main nav {
             width: 0.1rem;
             height: 30%;
             position: absolute;
-            animation: elektriciteit-filter 0.5s infinite;
+            animation: elektriciteit-filter 0.5s infinite var(--delay);
 
             @media (prefers-reduced-motion: no-preference) {
               transition: var(--transition-slower);
@@ -489,10 +491,10 @@ main nav {
             }
 
             &:first-of-type {
+              --delay: 0.5s;
               top: 14%;
               left: 30%;
               rotate: 10deg;
-              animation-delay: -0.5s;
             }
 
             &:nth-of-type(2) {
@@ -502,24 +504,24 @@ main nav {
             }
 
             &:nth-of-type(3) {
+              --delay: 0.25s;
               top: 30%;
               left: 60%;
               rotate: 120deg;
-              animation-delay: -0.25s;
             }
 
             &:nth-of-type(4) {
+              --delay: 0.15s;
               top: 20%;
               left: 45%;
               rotate: -10deg;
-              animation-delay: -0.15s;
             }
 
             &:nth-of-type(5) {
+              --delay: 0.35s;
               top: 18%;
               left: 70%;
               rotate: 300deg;
-              animation-delay: -0.35s;
             }
           }
         }
@@ -540,7 +542,7 @@ main nav {
           transform: rotateX(10deg);
 
           > span:first-of-type {
-            background: radial-gradient(white, gold);
+            background: radial-gradient(in okLCH, white, gold);
             filter: grayscale(0.7) brightness(0.8);
             aspect-ratio: 1 / 2.75;
             position: absolute;
@@ -595,6 +597,7 @@ main nav {
           > span:nth-of-type(2)::before,
           > span:nth-of-type(2)::after {
             background: radial-gradient(
+              in okLCH,
               var(--metal-color),
               var(--metal-color-darker)
             );
@@ -642,6 +645,7 @@ main nav {
             span:nth-of-type(5)::before,
             span:nth-of-type(5)::after {
               background: radial-gradient(
+                in okLCH,
                 var(--metal-color),
                 var(--metal-color-darker)
               );

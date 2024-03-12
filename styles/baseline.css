@@ -26,6 +26,8 @@
 
   --rain-color: hsl(208, 100%, 66%);
   --snow-color: hsl(0, 0%, 100%);
+  --snow-filter: drop-shadow(5vw 5vh 0.2rem var(--snow-color))
+    drop-shadow(-6vw -10vh 0.1rem var(--snow-color));
 
   --boat-primary-color: hsl(0, 70%, 42%);
   --boat-secondary-color: hsl(0, 0%, 100%);
@@ -93,6 +95,7 @@ s {
   border-radius: 50%;
   z-index: 100;
   border-radius: 50% 45% 60% 40% / 45% 30% 65% 55%;
+  filter: var(--snow-filter);
 
   &:first-of-type {
     box-shadow:

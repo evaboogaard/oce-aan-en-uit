@@ -53,10 +53,11 @@ main {
   }
 
   > div:last-of-type {
-    /* sneeuw!!!!!!!!! */
+    /* zee sneeuw!!!!!!!!! */
     s {
       width: 0.1rem;
       top: calc(var(--ocean-height) - 40vh);
+      filter: var(--snow-filter);
       animation: marine-snow 9s infinite linear paused;
 
       @media (prefers-reduced-motion: no-preference) {

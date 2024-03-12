@@ -23,12 +23,12 @@ main > div:nth-of-type(2) {
     > div:first-of-type {
       position: relative;
       background-image: linear-gradient(
-          60deg,
+          60deg in okLCH,
           transparent 0 2.5rem,
           var(--boat-primary-color) 2.5rem 0
         ),
         linear-gradient(
-          -60deg,
+          -60deg in okLCH,
           transparent 0 2.5rem,
           var(--boat-primary-color) 2.5rem 0
         );
@@ -57,7 +57,8 @@ main > div:nth-of-type(2) {
     > div:first-of-type::after {
       content: '';
       background: linear-gradient(
-        60deg,
+        60deg in okLCH,
+
         antiquewhite 0% 50%,
         transparent 50% 100%
       );
@@ -161,7 +162,11 @@ main > div:nth-of-type(2) {
       r {
         width: 1.25rem;
         height: 1.25rem;
-        background: linear-gradient(45deg, #d8d8d8 40%, var(--ocean-color));
+        background: linear-gradient(
+          45deg in okLCH,
+          #d8d8d8 40%,
+          var(--ocean-color)
+        );
         border: 5px ridge var(--boat-tertiary-color);
         border-radius: 50%;
       }
@@ -201,6 +206,14 @@ main > div:nth-of-type(2) {
     r:first-of-type,
     r:last-of-type {
       display: block;
+    }
+  }
+}
+
+@container boat (min-width: 34rem) {
+  main > div:nth-of-type(2) > div {
+    > div:first-of-type {
+      --boat-primary-color: red;
     }
   }
 }

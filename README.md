@@ -2,9 +2,21 @@
 
 welkom bij dit project voor het vak CSS to the rescue.
 
-## install guide
+## workshops
 
-je hoeft helemaal niets te doen! dit project is alleen met HTML en CSS gebouwd. :D
+ik heb mijn best gedaan om zo nu en dan een workshopje bij te wonen, dit is wat ik er van opgeschreven heb.
+
+![](./img/process/wrkshps/1.png)
+![](./img/process/wrkshps/2.png)
+![](./img/process/wrkshps/3.png)
+![](./img/process/wrkshps/4.png)
+![](./img/process/wrkshps/5.png)
+![](./img/process/wrkshps/6.png)
+![](./img/process/wrkshps/7.png)
+![](./img/process/wrkshps/8.png)
+![](./img/process/wrkshps/9.png)
+![](./img/process/wrkshps/10.png)
+![](./img/process/wrkshps/11.png)
 
 ## proces
 
