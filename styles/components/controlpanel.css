@@ -498,6 +498,8 @@ main nav {
             }
 
             &:nth-of-type(2) {
+              --delay: 0s;
+
               top: 20%;
               left: 50%;
               rotate: 80deg;

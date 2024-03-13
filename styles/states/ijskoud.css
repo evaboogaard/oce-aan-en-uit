@@ -38,5 +38,15 @@ body:has(input[value='ijskoud']:checked) {
         }
       }
     }
+
+    #visje,
+    #turtle,
+    #haaitje,
+    #kwal,
+    #tonijn {
+      g:nth-last-child(1) {
+        display: block;
+      }
+    }
   }
 }

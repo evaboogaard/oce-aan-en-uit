@@ -83,5 +83,15 @@ body:has(input[value='regen']:checked) {
         }
       }
     }
+
+    #visje,
+    #turtle,
+    #haaitje,
+    #kwal,
+    #tonijn {
+      g:nth-last-child(2) {
+        display: block;
+      }
+    }
   }
 }

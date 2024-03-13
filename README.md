@@ -125,6 +125,7 @@ meerdere states ??? leuk.
 - https://codepen.io/shooft/pen/MWRyqNy
 - https://stackoverflow.com/questions/3859101/what-does-ahref-do-in-css
 - https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state?retiredLocale=nl
+- https://www.w3schools.com/cssref/sel_nth-last-child.php
 
 ## to do
 

@@ -5,6 +5,8 @@ main > div:nth-of-type(2) {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: fit-content;
+  position: absolute;
   transition: var(--transition-base);
 
   /* bootje container om te slepen */

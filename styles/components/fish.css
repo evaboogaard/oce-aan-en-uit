@@ -17,6 +17,11 @@ path {
   stroke-width: 0px;
 }
 
+svg:not(:has(use)) {
+  width: 0;
+  height: 0;
+}
+
 svg:has(use) {
   position: absolute;
   right: 1rem;
@@ -29,7 +34,7 @@ svg:has(use) {
   }
 
   @media (min-width: 800px) {
-    --duration: calc(var(--duration) * 2);
+    --duration: calc(var(--duration) * 1000);
   }
 }
 
@@ -74,6 +79,27 @@ svg:has(use) {
 
     > g {
       fill: var(--fish-eye-color);
+    }
+  }
+
+  /* ijskoud */
+  > g:nth-last-child(2) {
+    display: none;
+    fill: white;
+    opacity: 0.2;
+  }
+
+  /* regen */
+  > g:nth-last-child(1) {
+    display: none;
+    path {
+      &:first-of-type {
+        fill: rgb(255, 68, 0);
+      }
+
+      &:last-of-type {
+        fill: rgb(161, 39, 39);
+      }
     }
   }
 }
@@ -164,6 +190,32 @@ svg:nth-child(4 of :has(use[href='#visje'])) {
   > g:nth-of-type(7) {
     fill: var(--fish-eye-color);
   }
+
+  /* ijskoud */
+  > g:nth-last-child(2) {
+    display: none;
+    > g {
+      fill: red;
+      > g {
+        clip-path: url(#clippath-1);
+        path {
+          fill: yellow;
+        }
+      }
+    }
+  }
+
+  /* regen */
+  > g:nth-last-child(1) {
+    display: none;
+    path {
+      fill: red;
+
+      &:first-of-type {
+        fill: purple;
+      }
+    }
+  }
 }
 
 svg:has(use[href='#tonijn']) {
@@ -245,6 +297,25 @@ svg:nth-child(4 of :has(use[href='#tonijn'])) {
   /* hoedje */
   > g:nth-of-type(4) {
     fill: url(#radial-gradient);
+  }
+
+  /* ijskoud */
+  > g:nth-last-child(1) {
+    display: none;
+    fill: var(--snow-color);
+    opacity: 0.2;
+  }
+
+  /* regen */
+  > g:nth-last-child(2) {
+    display: none;
+    > g {
+      fill: red;
+      > g {
+        clip-path: url(#clippath-1);
+        fill: orange;
+      }
+    }
   }
 }
 
@@ -328,6 +399,32 @@ svg:nth-child(4 of :has(use[href='#kwal'])) {
   /* oog */
   > g:nth-of-type(5) {
     fill: var(--fish-eye-color);
+  }
+
+  /* regen */
+  > g:nth-last-child(2) {
+    display: none;
+    > g {
+      > g {
+        clip-path: url(#clippath-2);
+
+        fill: red;
+      }
+    }
+  }
+
+  /* ijskoud */
+  > g:nth-last-child(1) {
+    display: none;
+    path {
+      &:first-of-type {
+        fill: red;
+      }
+
+      &:last-of-type {
+        fill: green;
+      }
+    }
   }
 }
 
@@ -448,6 +545,32 @@ svg:nth-child(4 of :has(use[href='#haaitje'])) {
       }
     }
   }
+
+  /* ijskoud */
+  > g:nth-last-child(1) {
+    display: none;
+    path {
+      fill: orange;
+      &:nth-of-type(3) {
+        fill: red;
+      }
+    }
+  }
+
+  /* regen */
+  > g:nth-last-child(2) {
+    display: none;
+    > path {
+      fill: black;
+    }
+    > g {
+      fill: white;
+      > g {
+        clip-path: url(#clippath-4);
+        fill: black;
+      }
+    }
+  }
 }
 
 svg:has(use[href='#turtle']) {
@@ -461,18 +584,18 @@ svg:nth-child(1 of :has(use[href='#turtle'])) {
   top: calc(var(--ocean-height) - 650vh);
 }
 
-svg:nth-child(1 of :has(use[href='#turtle'])) {
+svg:nth-child(2 of :has(use[href='#turtle'])) {
   --delay: -18s;
   top: calc(var(--ocean-height) - 550vh);
 }
 
-svg:nth-child(1 of :has(use[href='#turtle'])) {
+svg:nth-child(3 of :has(use[href='#turtle'])) {
   --delay: -5s;
   top: calc(var(--ocean-height) - 450vh);
   filter: var(--fish-deep);
 }
 
-svg:nth-child(1 of :has(use[href='#turtle'])) {
+svg:nth-child(4 of :has(use[href='#turtle'])) {
   --delay: -14s;
   top: calc(var(--ocean-height) - 500vh);
   filter: var(--fish-deeper);

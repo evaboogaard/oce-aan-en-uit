@@ -20,7 +20,7 @@ main {
     z-index: -1;
     height: 20vh;
     width: 200vw;
-    transform: translateY(19.5vh);
+    transform: translateY(50vh);
     background-image: radial-gradient(
       in okLCH,
       var(--ocean-color) 10%,
