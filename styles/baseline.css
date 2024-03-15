@@ -51,6 +51,16 @@
   --transition-slower: 1s ease-out;
 }
 
+html,
+body,
+main {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
 h1,
 h2,
 h3,

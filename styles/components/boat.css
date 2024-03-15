@@ -5,7 +5,7 @@ main > div:nth-of-type(2) {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: fit-content;
+  height: 100vh;
   position: absolute;
   transition: var(--transition-base);
 
@@ -13,9 +13,8 @@ main > div:nth-of-type(2) {
   > div {
     overflow: hidden;
     z-index: 100;
-
+    transform: translateY(-6rem);
     padding: 0.5rem;
-    transform: translateY(21vh);
     resize: horizontal;
     min-width: 12.5rem;
     height: 15rem;

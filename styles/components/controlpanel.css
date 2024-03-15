@@ -108,6 +108,15 @@ main nav {
             &:hover {
               box-shadow: 0 0 0.25rem var(--sun-color);
               filter: drop-shadow(0 0 0.25rem var(--sun-color));
+
+              &:has(input[value='regen']),
+              &:has(input[value='bliksem']) {
+                > div {
+                  @media (prefers-reduced-motion: no-preference) {
+                    animation-play-state: running;
+                  }
+                }
+              }
             }
 
             &:has(input[value='regen']),
@@ -123,6 +132,8 @@ main nav {
                 top: 2rem;
                 scale: 0.9;
                 transform-style: preserve-3d;
+                animation: klein-wolkje-scale 1s infinite ease-in-out alternate
+                  paused -0.5s;
 
                 @media (prefers-reduced-motion: no-preference) {
                   transition: var(--transition-slower);
@@ -275,10 +286,7 @@ main nav {
                 outline: 2px solid var(--steampunk-button-primary-color);
                 border-top: 2px solid var(--steampunk-button-primary-color);
                 border-bottom: 1px solid var(--steampunk-button-primary-color);
-
-                @media (prefers-reduced-motion: no-preference) {
-                  transition: var(--transition-base);
-                }
+                transition: var(--transition-base);
               }
 
               &::after {
@@ -291,10 +299,7 @@ main nav {
                 transform: rotateX(110deg);
                 background-color: var(--steampunk-button-primary-color);
                 filter: brightness(0.8);
-
-                @media (prefers-reduced-motion: no-preference) {
-                  transition: var(--transition-base);
-                }
+                transition: var(--transition-base);
               }
             }
           }

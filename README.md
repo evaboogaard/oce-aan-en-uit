@@ -126,6 +126,7 @@ meerdere states ??? leuk.
 - https://stackoverflow.com/questions/3859101/what-does-ahref-do-in-css
 - https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state?retiredLocale=nl
 - https://www.w3schools.com/cssref/sel_nth-last-child.php
+- https://stackoverflow.com/questions/23367345/100vw-causing-horizontal-overflow-but-only-if-more-than-one
 
 ## to do
 
@@ -139,3 +140,4 @@ meerdere states ??? leuk.
 - alien mannetje, astronautje, tikkertje-spelend? die sin / cosin nerd zooi gebruiken???????? (aan sanne vragen??)
 - marine snow maken
 - zonnig: brouwers pilsie en zonnebril? of zonnig base state?
+- css relative color syntax

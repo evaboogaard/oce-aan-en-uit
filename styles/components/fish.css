@@ -32,10 +32,6 @@ svg:has(use) {
   @media (prefers-reduced-motion: no-preference) {
     animation-play-state: running;
   }
-
-  @media (min-width: 800px) {
-    --duration: calc(var(--duration) * 1000);
-  }
 }
 
 /*
@@ -51,21 +47,29 @@ svg:has(use) {
   /* staart boven */
   > path:first-of-type {
     fill: var(--fish-secondary-color);
+    animation: visje-staart 2s infinite ease-in-out alternate;
+    transform-origin: bottom;
   }
 
   /* staart onder */
   > path:nth-of-type(2) {
     fill: var(--fish-secondary-color);
+    animation: visje-staart 2s infinite ease-in-out alternate-reverse;
+    transform-origin: right;
   }
 
   /* vin boven */
   > path:nth-of-type(3) {
     fill: var(--fish-secondary-color);
+    animation: visje-vin 2s infinite ease-in-out alternate;
+    transform-origin: center bottom;
   }
 
   /* vin onder */
   > path:nth-of-type(4) {
     fill: var(--fish-secondary-color);
+    animation: visje-vin 2s infinite ease-in-out alternate;
+    transform-origin: center top;
   }
 
   /* lichaam */
@@ -82,23 +86,23 @@ svg:has(use) {
     }
   }
 
-  /* ijskoud */
+  /* regen */
   > g:nth-last-child(2) {
     display: none;
     fill: white;
     opacity: 0.2;
   }
 
-  /* regen */
+  /* ijskoud */
   > g:nth-last-child(1) {
     display: none;
     path {
       &:first-of-type {
-        fill: rgb(255, 68, 0);
+        fill: #ff4400;
       }
 
       &:last-of-type {
-        fill: rgb(161, 39, 39);
+        fill: #a12727;
       }
     }
   }
@@ -107,6 +111,10 @@ svg:has(use) {
 svg:has(use[href='#visje']) {
   --duration: 20s;
   --fish-size: 6rem;
+
+  @media (min-width: 800px) {
+    --duration: 40s;
+  }
 }
 
 svg:nth-child(1 of :has(use[href='#visje'])) {
@@ -191,28 +199,28 @@ svg:nth-child(4 of :has(use[href='#visje'])) {
     fill: var(--fish-eye-color);
   }
 
-  /* ijskoud */
+  /* regen */
   > g:nth-last-child(2) {
     display: none;
     > g {
-      fill: red;
+      fill: rgb(179, 113, 0);
       > g {
         clip-path: url(#clippath-1);
         path {
-          fill: yellow;
+          fill: rgb(217, 159, 0);
         }
       }
     }
   }
 
-  /* regen */
+  /* ijskoud */
   > g:nth-last-child(1) {
     display: none;
     path {
-      fill: red;
+      fill: rgb(19, 145, 14);
 
       &:first-of-type {
-        fill: purple;
+        fill: rgb(90, 183, 69);
       }
     }
   }
@@ -223,6 +231,10 @@ svg:has(use[href='#tonijn']) {
   --delay: -5s;
   --fish-size: 10rem;
   top: calc(var(--ocean-height) - 600vh);
+
+  @media (min-width: 800px) {
+    --duration: 60s;
+  }
 }
 
 svg:nth-child(1 of :has(use[href='#tonijn'])) {
@@ -302,7 +314,7 @@ svg:nth-child(4 of :has(use[href='#tonijn'])) {
   /* ijskoud */
   > g:nth-last-child(1) {
     display: none;
-    fill: var(--snow-color);
+    fill: white;
     opacity: 0.2;
   }
 
@@ -310,10 +322,16 @@ svg:nth-child(4 of :has(use[href='#tonijn'])) {
   > g:nth-last-child(2) {
     display: none;
     > g {
-      fill: red;
+      > path {
+        fill: rgb(162, 2, 2);
+      }
+
       > g {
         clip-path: url(#clippath-1);
-        fill: orange;
+
+        > path {
+          fill: yellow;
+        }
       }
     }
   }
@@ -405,10 +423,11 @@ svg:nth-child(4 of :has(use[href='#kwal'])) {
   > g:nth-last-child(2) {
     display: none;
     > g {
+      fill: steelblue;
       > g {
         clip-path: url(#clippath-2);
 
-        fill: red;
+        fill: palevioletred;
       }
     }
   }
@@ -418,11 +437,11 @@ svg:nth-child(4 of :has(use[href='#kwal'])) {
     display: none;
     path {
       &:first-of-type {
-        fill: red;
+        fill: rgb(130, 48, 168);
       }
 
       &:last-of-type {
-        fill: green;
+        fill: rgb(108, 35, 142);
       }
     }
   }
@@ -431,6 +450,10 @@ svg:nth-child(4 of :has(use[href='#kwal'])) {
 svg:has(use[href='#haaitje']) {
   --duration: 22s;
   --fish-size: 23rem;
+
+  @media (min-width: 800px) {
+    --duration: 44s;
+  }
 }
 
 svg:nth-child(1 of :has(use[href='#haaitje'])) {
@@ -475,8 +498,6 @@ svg:nth-child(4 of :has(use[href='#haaitje'])) {
       fill: var(--fish-secondary-color);
 
       > g {
-        clip-path: url(#clippath);
-
         > g {
           fill: var(--fish-secondary-color-darker);
         }
@@ -486,13 +507,13 @@ svg:nth-child(4 of :has(use[href='#haaitje'])) {
 
   /* hoofd */
   > g:nth-of-type(2) {
+    animation: schildpad-hoofdje 2s infinite alternate ease-in-out;
+
     > g {
       fill: var(--fish-secondary-color);
 
       > g {
-        clip-path: url(#clippath-1);
-
-        > path {
+        path {
           fill: var(--fish-secondary-color-darker);
         }
       }
@@ -519,11 +540,8 @@ svg:nth-child(4 of :has(use[href='#haaitje'])) {
       fill: var(--fish-primary-color-darker);
 
       > g {
-        clip-path: url(#clippath-2);
-
-        > g {
-          fill: var(--fish-primary-color);
-        }
+        fill: var(--fish-primary-color);
+        transform: translateY(1rem);
       }
     }
   }
@@ -550,9 +568,9 @@ svg:nth-child(4 of :has(use[href='#haaitje'])) {
   > g:nth-last-child(1) {
     display: none;
     path {
-      fill: orange;
+      fill: rgb(147, 99, 16);
       &:nth-of-type(3) {
-        fill: red;
+        fill: rgb(72, 45, 11);
       }
     }
   }
@@ -564,10 +582,10 @@ svg:nth-child(4 of :has(use[href='#haaitje'])) {
       fill: black;
     }
     > g {
-      fill: white;
+      fill: orangered;
       > g {
         clip-path: url(#clippath-4);
-        fill: black;
+        fill: salmon;
       }
     }
   }
@@ -577,6 +595,10 @@ svg:has(use[href='#turtle']) {
   --duration: 25s;
   --delay: -21s;
   --fish-size: 15rem;
+
+  @media (min-width: 800px) {
+    --duration: 50s;
+  }
 }
 
 svg:nth-child(1 of :has(use[href='#turtle'])) {
@@ -773,6 +795,10 @@ svg:nth-child(4 of :has(use[href='#plankton'])) {
 
 svg:has(use[href='#anglerfish']) {
   --duration: 20s;
+
+  @media (min-width: 800px) {
+    --duration: 40s;
+  }
 }
 
 svg:nth-child(1 of :has(use[href='#anglerfish'])) {
