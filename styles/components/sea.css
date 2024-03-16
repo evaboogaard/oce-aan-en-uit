@@ -2,47 +2,36 @@ main {
   /* oceaan kleurtje */
   background: linear-gradient(
     in okLCH,
-    var(--ocean-color) 0 10%,
-    var(--ocean-color-darker),
-    var(--ocean-color-dark),
-    black 70%
+    var(--ocean-top-color) 0 10%,
+    color-mix(in okLCH, var(--ocean-color), black 10%) 50%,
+    color-mix(in okLCH, var(--ocean-color), black 50%),
+    black 80%
   );
-
   height: var(--ocean-height);
 
+  /* cirkeltjes onder boot */
+  /* gejat van https://codepen.io/shooft/pen/WNWoRQv?editors=1100 */
   > div:nth-of-type(3) {
-    z-index: -1;
-    height: 20vh;
-    width: 200vw;
-    transform: translateY(50vh);
-    background-image: radial-gradient(
-      in okLCH,
-      var(--ocean-color) 10%,
-      var(--ocean-color-lighter) 10% 12%,
-      var(--ocean-color) 15%,
-      var(--ocean-color-lighter) 15% 17%,
-      var(--ocean-color) 20%,
-      var(--ocean-color-lighter) 20% 23%,
-      var(--ocean-color) 27%,
-      var(--ocean-color-lighter) 27% 32%,
-      var(--ocean-color) 38%,
-      var(--ocean-color-lighter) 38% 41%,
-      var(--ocean-color) 50%,
-      var(--ocean-color-lighter) 50% 55%,
-      var(--ocean-color) 65%
-    );
-    background-size: 80% 200%;
-    background-position: -75% 100%;
-    background-repeat: no-repeat;
+    transform: translateY(46vh) translateX(-5vw);
+    display: grid;
+    place-items: start center;
 
-    mask-image: radial-gradient(red 70%, transparent 0);
-    mask-size: 80% 200%;
-    mask-position: -75% 100%;
+    @media (min-width: 600px) {
+      transform: translateY(46vh) translateX(0);
+    }
 
-    @media (min-width: 800px) {
-      width: 100vw;
-      background-position: 50% 100%;
-      mask-position: 50% 100%;
+    span {
+      animation: golfjes 15s infinite linear;
+      width: 36rem;
+      aspect-ratio: 36/6;
+      background-image: repeating-radial-gradient(
+        in oklch,
+        color-mix(in oklch, var(--ocean-top-color), black 40%) calc(100% - 3rem),
+        color-mix(in oklch, var(--ocean-top-color), transparent 75%) 100%
+      );
+      background-position: center;
+      background-repeat: no-repeat;
+      mask: radial-gradient(farthest-side, red, #f003 35%, #f000);
     }
   }
 

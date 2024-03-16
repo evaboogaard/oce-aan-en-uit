@@ -1,13 +1,84 @@
 body:has(input[value='ijskoud']:checked) {
+  --lucht-color: #64aec1;
+
   main {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100vw;
+      height: 200vh;
+      top: 40vh;
+      background-image: radial-gradient(
+        circle at top in okLCH,
+        color-mix(in okLCH, var(--lucht-color), red 0%),
+        color-mix(in okLCH, var(--lucht-color), red 25%) 5rem,
+        color-mix(in okLCH, var(--lucht-color), red 40%) 10rem,
+        transparent 40%
+      );
+      opacity: 0.7;
+      background-size: 100% 50%;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: white;
+      filter: blur(20px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      opacity: 0.5;
+      top: 55vh;
+      transform: rotateX(50deg);
+      width: 10rem;
+      left: calc(50% - 5rem);
+    }
+
     /* lucht */
     > div:first-of-type {
-      --lucht-dark-color: #addfeb;
-      --lucht-light-color: #dbf5fb;
+      animation:
+        stralen1 103s infinite linear,
+        stralen2 111s infinite linear;
+
+      background-image: radial-gradient(
+          circle in okLCH,
+          color-mix(in okLCH, var(--lucht-color), red 10%),
+          color-mix(in okLCH, var(--lucht-color), red 20%) 4rem,
+          color-mix(in okLCH, var(--lucht-color), red 35%) 6rem,
+          transparent 40%
+        ),
+        repeating-conic-gradient(
+          from var(--angle1, 13deg) in okLCH,
+          color-mix(in okLCH, var(--ocean-color-dark), transparent 70%) 0deg,
+          #fff0,
+          color-mix(in okLCH, var(--ocean-color-dark), transparent 70%) 30deg
+        ),
+        repeating-conic-gradient(
+          from var(--angle2, 37deg) at bottom in oklch,
+          #9f93 0deg,
+          #fff0,
+          #9f93 60deg
+        ),
+        linear-gradient(
+          90deg in okLCH,
+          color-mix(in okLCH, var(--ocean-color), black 20%),
+          transparent,
+          color-mix(in okLCH, var(--ocean-color), black 20%)
+        ),
+        radial-gradient(
+          circle at bottom in okLCH,
+          color-mix(in okLCH, var(--ocean-color), white 30%),
+          color-mix(in okLCH, var(--ocean-color), black 0%) 60%
+        );
+
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
 
       > span:first-of-type {
         --sun-color: #ffffff;
-        transform: translateY(-25vh);
+        transform: translateY(-33vh);
         scale: 0.6;
       }
 

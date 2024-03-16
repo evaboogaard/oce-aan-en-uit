@@ -18,6 +18,7 @@ main > div:first-of-type {
   );
   background-size: 150% 150%;
   background-position: top center;
+  z-index: 50;
   animation: bewegende-lucht 5s infinite alternate ease-in-out;
 
   /* zonnetje */
@@ -132,10 +133,7 @@ main > div:first-of-type {
       aspect-ratio: 2/1;
       position: absolute;
       border-radius: 50%;
-
-      @media (prefers-reduced-motion: no-preference) {
-        transition: var(--transition-slower);
-      }
+      transition: var(--transition-slower);
     }
 
     &::before {

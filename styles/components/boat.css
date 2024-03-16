@@ -8,6 +8,7 @@ main > div:nth-of-type(2) {
   height: 100vh;
   position: absolute;
   transition: var(--transition-base);
+  z-index: 100;
 
   /* bootje container om te slepen */
   > div {
@@ -22,6 +23,7 @@ main > div:nth-of-type(2) {
 
     /* bootje */
     > div:first-of-type {
+      z-index: 100;
       position: relative;
       background-image: linear-gradient(
           60deg in okLCH,
@@ -41,6 +43,8 @@ main > div:nth-of-type(2) {
       height: 100%;
       bottom: 0;
       filter: drop-shadow(0.2rem 0.1rem 0.15rem var(--shadow-color-base));
+      transform-origin: center bottom;
+      animation: dobberen 2s infinite ease-in-out alternate;
     }
 
     /* mast van het zeil */
@@ -76,6 +80,38 @@ main > div:nth-of-type(2) {
 
       @media (min-width: 800px) {
         animation: none;
+      }
+    }
+
+    /* sneeuwpopje */
+    > div:nth-of-type(3) {
+      position: absolute;
+      width: 2rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: #f09;
+      bottom: 5rem;
+      left: 2rem;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+
+      &::before {
+        bottom: 1.25rem;
+        width: 1.75rem;
+        left: 0.125rem;
+      }
+
+      &::after {
+        bottom: 2.5rem;
+        width: 1.5rem;
+        left: 0.25rem;
       }
     }
   }

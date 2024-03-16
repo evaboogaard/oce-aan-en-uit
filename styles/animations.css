@@ -330,3 +330,34 @@
     filter: drop-shadow(0 0 3rem white);
   }
 }
+
+@keyframes golfjes {
+  0% {
+    background-size: 36rem 6rem;
+  }
+  100% {
+    background-size: 72rem 12rem;
+  }
+}
+
+@keyframes stralen1 {
+  to {
+    --angle1: 360deg;
+  }
+}
+
+@keyframes stralen2 {
+  to {
+    --angle2: -360deg;
+  }
+}
+
+@keyframes dobberen {
+  from {
+    transform: rotate(-1deg);
+  }
+
+  to {
+    transform: rotate(1deg);
+  }
+}

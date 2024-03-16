@@ -65,7 +65,7 @@ ik heb EINDELIJK aan de states gewerkt waar mijn control panel controle over hee
 dit is de css structuur waar ik voor ben gegaan, ik heb geen idee of het een goede manier is maar it made sense to me dus het zal wel los lopen.
 ![](./img/process/w2/structure.png)
 
-waar ik nu wel echt heel blij mee ben is het gebruik van custom properties. ik heb het idee dat alles een beeeeetje op zijn plek begint te vallen in mijn hoofd als het om CSS gaat. (al snap ik nog steeds niks van sinus en cosinus en alles dat met wiskunde te maken heeft)
+waar ik nu wel echt heel blij mee ben is het gebruik van custom properties. ik heb het idee dat alles een beeeeetje op zijn plek begint te vallen in mijn hoofd als het om CSS gaat.
 ![](./img/process/w2/custom-properties.png)
 
 dit ga ik dit weekend en volgende week doen. het is nu midden in de nacht en ik kan niet stoppen met hierover na te denken. help.
@@ -86,6 +86,18 @@ svg's zijn messy as hell
 meerdere states ??? leuk.
 ![](./img/process/w3/vis_3.png)
 ![](./img/process/w3/vis_4.png)
+
+Ik wilde eigenlijk van die ringetjes onder mijn bootje die dan zouden bewegen, ik heb een paar dingen geprobeerd maar uiteindelijk een radial gradient met background size geanimeerd.
+![](./img/process/w3/gradient-1.png)
+![](./img/process/w3/gradient-2.png)
+![](./img/process/w3/gradient.png)
+
+Deze lucht was vele malen indrukwekkender dan de lucht die ik op dag 1 had gemaakt, dus ik heb er (nogal directe) inspiratie van genomen en een beetje geklooid met weerspiegeling.
+
+![](./img/process/w3/gradient-insp.png)
+
+![](./img/process/w3/weerspiegeling.png)
+![](./img/process/w3/gestolen-gradient.png)
 
 ## bronnenlijst
 
