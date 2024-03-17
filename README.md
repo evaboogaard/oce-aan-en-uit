@@ -99,6 +99,12 @@ Deze lucht was vele malen indrukwekkender dan de lucht die ik op dag 1 had gemaa
 ![](./img/process/w3/weerspiegeling.png)
 ![](./img/process/w3/gestolen-gradient.png)
 
+dit is hoe de states er uiteindelijk uit zien na wat gekloot
+![](./img/process/w3/state1.png)
+![](./img/process/w3/state2.png)
+![](./img/process/w3/state3.png)
+![](./img/process/w3/state4.png)
+
 ## bronnenlijst
 
 - https://www.w3schools.com/tags/att_form_action.asp
@@ -146,13 +152,14 @@ Deze lucht was vele malen indrukwekkender dan de lucht die ik op dag 1 had gemaa
 ## to do
 
 - kijken naar linear timing function bramus developer.chrome, linear() generator. bouncy stuff. don't know if needed.
-- animation-composition cool? animaties combineren?
-- kleuren omzetten naar hsl, ff vragen hoe en wat
-- illustraties maken voor de dieren: 3 kleine visjes, 2 mid visjes, een schildpad, 2 diepzee vissen (met lampje!!!) en een zeester en een plankton.
+  ✅ - animation-composition cool? animaties combineren?
+  ✅ - kleuren omzetten naar hsl, ff vragen hoe en wat
+  ✅ - illustraties maken voor de dieren: 3 kleine visjes, 2 mid visjes, een schildpad, 2 diepzee vissen (met lampje!!!) en een zeester en een plankton.
 - scrolldriven: een anker dat naar beneden zakt, een vis die er door geraakt wordt???? (oke ook anker designen dan want dat ga je nu echt ff niet in css doen maatje)
 - een zeemijn???? explosies?!??!?!?!?!!!????!!!!
 - ijs knop maken, ik weet echt niet wat voor design
 - alien mannetje, astronautje, tikkertje-spelend?
-- marine snow maken
-- zonnig: brouwers pilsie en zonnebril? of zonnig base state?
+  ✅ - marine snow maken
+  ✅ - zonnig: brouwers pilsie en zonnebril? of zonnig base state?
 - css relative color syntax
+- de wolken zijn echt lelijk. do better

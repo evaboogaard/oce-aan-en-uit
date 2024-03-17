@@ -40,6 +40,9 @@ main > div:nth-of-type(2) {
       background-position:
         bottom left,
         bottom right;
+
+      mask-image: linear-gradient(to top, transparent, red 2%);
+
       height: 100%;
       bottom: 0;
       filter: drop-shadow(0.2rem 0.1rem 0.15rem var(--shadow-color-base));
