@@ -139,6 +139,9 @@ Deze lucht was vele malen indrukwekkender dan de lucht die ik op dag 1 had gemaa
 - https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state?retiredLocale=nl
 - https://www.w3schools.com/cssref/sel_nth-last-child.php
 - https://stackoverflow.com/questions/23367345/100vw-causing-horizontal-overflow-but-only-if-more-than-one
+- https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode
+- https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+- https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
 
 ## to do
 
@@ -149,7 +152,7 @@ Deze lucht was vele malen indrukwekkender dan de lucht die ik op dag 1 had gemaa
 - scrolldriven: een anker dat naar beneden zakt, een vis die er door geraakt wordt???? (oke ook anker designen dan want dat ga je nu echt ff niet in css doen maatje)
 - een zeemijn???? explosies?!??!?!?!?!!!????!!!!
 - ijs knop maken, ik weet echt niet wat voor design
-- alien mannetje, astronautje, tikkertje-spelend? die sin / cosin nerd zooi gebruiken???????? (aan sanne vragen??)
+- alien mannetje, astronautje, tikkertje-spelend?
 - marine snow maken
 - zonnig: brouwers pilsie en zonnebril? of zonnig base state?
 - css relative color syntax

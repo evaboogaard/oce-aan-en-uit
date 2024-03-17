@@ -119,24 +119,24 @@ svg:has(use[href='#visje']) {
 
 svg:nth-child(1 of :has(use[href='#visje'])) {
   --delay: -20s;
-  top: calc(var(--ocean-height) - 700vh);
+  top: 100vh;
 }
 
 svg:nth-child(2 of :has(use[href='#visje'])) {
   --delay: -25s;
-  top: calc(var(--ocean-height) - 720vh);
+  top: 80vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(3 of :has(use[href='#visje'])) {
   --delay: -18s;
-  top: calc(var(--ocean-height) - 680vh);
+  top: 120vh;
   filter: var(--fish-deeper);
 }
 
 svg:nth-child(4 of :has(use[href='#visje'])) {
   --delay: -15s;
-  top: calc(var(--ocean-height) - 600vh);
+  top: 200vh;
 }
 
 /*
@@ -230,7 +230,6 @@ svg:has(use[href='#tonijn']) {
   --duration: 30s;
   --delay: -5s;
   --fish-size: 10rem;
-  top: calc(var(--ocean-height) - 600vh);
 
   @media (min-width: 800px) {
     --duration: 60s;
@@ -239,25 +238,25 @@ svg:has(use[href='#tonijn']) {
 
 svg:nth-child(1 of :has(use[href='#tonijn'])) {
   --delay: -20s;
-  top: calc(var(--ocean-height) - 620vh);
+  top: 180vh;
 }
 
 svg:nth-child(2 of :has(use[href='#tonijn'])) {
   --delay: -30s;
   --fish-size: 8rem;
-  top: calc(var(--ocean-height) - 600vh);
+  top: 200vh;
 }
 
 svg:nth-child(3 of :has(use[href='#tonijn'])) {
   --delay: -26s;
   --fish-size: 9rem;
-  top: calc(var(--ocean-height) - 550vh);
+  top: 250vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(4 of :has(use[href='#tonijn'])) {
   --delay: -12s;
-  top: calc(var(--ocean-height) - 450vh);
+  top: 350vh;
   filter: var(--fish-deeper);
 }
 
@@ -345,27 +344,25 @@ svg:has(use[href='#kwal']) {
 
 svg:nth-child(1 of :has(use[href='#kwal'])) {
   --float-position: 15vw;
-
-  top: calc(var(--ocean-height) - 300vh);
+  top: 500vh;
   filter: var(--fish-deeper);
 }
 
 svg:nth-child(2 of :has(use[href='#kwal'])) {
   --float-position: 75vw;
-
-  top: calc(var(--ocean-height) - 500vh);
+  top: 300vh;
 }
 
 svg:nth-child(3 of :has(use[href='#kwal'])) {
   --float-position: 40vw;
 
-  top: calc(var(--ocean-height) - 450vh);
+  top: 350vh;
 }
 
 svg:nth-child(4 of :has(use[href='#kwal'])) {
   --float-position: 0vw;
 
-  top: calc(var(--ocean-height) - 400vh);
+  top: 400vh;
   filter: var(--fish-deep);
 }
 
@@ -458,24 +455,24 @@ svg:has(use[href='#haaitje']) {
 
 svg:nth-child(1 of :has(use[href='#haaitje'])) {
   --delay: -12s;
-  top: calc(var(--ocean-height) - 200vh);
+  top: 600vh;
   filter: var(--fish-deeper);
 }
 
 svg:nth-child(2 of :has(use[href='#haaitje'])) {
   --delay: -18s;
-  top: calc(var(--ocean-height) - 420vh);
+  top: 380vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(3 of :has(use[href='#haaitje'])) {
   --delay: -22s;
-  top: calc(var(--ocean-height) - 500vh);
+  top: 300vh;
 }
 
 svg:nth-child(4 of :has(use[href='#haaitje'])) {
   --delay: -27s;
-  top: calc(var(--ocean-height) - 350vh);
+  top: 450vh;
 }
 
 /*
@@ -603,23 +600,23 @@ svg:has(use[href='#turtle']) {
 
 svg:nth-child(1 of :has(use[href='#turtle'])) {
   --delay: -12s;
-  top: calc(var(--ocean-height) - 650vh);
+  top: 150vh;
 }
 
 svg:nth-child(2 of :has(use[href='#turtle'])) {
   --delay: -18s;
-  top: calc(var(--ocean-height) - 550vh);
+  top: 250vh;
 }
 
 svg:nth-child(3 of :has(use[href='#turtle'])) {
   --delay: -5s;
-  top: calc(var(--ocean-height) - 450vh);
+  top: 350vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(4 of :has(use[href='#turtle'])) {
   --delay: -14s;
-  top: calc(var(--ocean-height) - 500vh);
+  top: 300vh;
   filter: var(--fish-deeper);
 }
 
@@ -675,23 +672,23 @@ svg:has(use[href='#plankton']) {
 
 svg:nth-child(1 of :has(use[href='#plankton'])) {
   --float-position: 40vw;
-  top: calc(var(--ocean-height) - 300vh);
+  top: 500vh;
 }
 
 svg:nth-child(2 of :has(use[href='#plankton'])) {
   --float-position: 19vw;
-  top: calc(var(--ocean-height) - 200vh);
+  top: 600vh;
 }
 
 svg:nth-child(3 of :has(use[href='#plankton'])) {
   --float-position: 65vw;
-  top: calc(var(--ocean-height) - 100vh);
+  top: 700vh;
   filter: var(--fish-deeper);
 }
 
 svg:nth-child(4 of :has(use[href='#plankton'])) {
   --float-position: 50vw;
-  top: calc(var(--ocean-height) - 50vh);
+  top: 750vh;
   filter: var(--fish-deep);
 }
 
@@ -804,25 +801,25 @@ svg:has(use[href='#anglerfish']) {
 svg:nth-child(1 of :has(use[href='#anglerfish'])) {
   --delay: -22s;
   --fish-size: 10rem;
-  top: calc(var(--ocean-height) - 50vh);
+  top: 750vh;
 }
 
 svg:nth-child(2 of :has(use[href='#anglerfish'])) {
   --delay: -25s;
   --fish-size: 8rem;
-  top: calc(var(--ocean-height) - 70vh);
+  top: 730vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(3 of :has(use[href='#anglerfish'])) {
   --delay: -16s;
   --fish-size: 6rem;
-  top: calc(var(--ocean-height) - 20vh);
+  top: 780vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(4 of :has(use[href='#anglerfish'])) {
   --delay: -16s;
   --fish-size: 9rem;
-  top: calc(var(--ocean-height) - 120vh);
+  top: 680vh;
 }

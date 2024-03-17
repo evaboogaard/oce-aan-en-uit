@@ -5,35 +5,30 @@
 }
 
 :root {
-  --control-panel-bg-color: hsl(22, 22%, 29%);
+  --control-panel-bg-color: oklch(41.11% 0.034 51.51);
   --steampunk-button-primary-color: hsl(34, 60%, 73%);
   --steampunk-button-secondary-color: hsl(28, 85%, 13%);
 
   --ocean-color: hsl(213, 65%, 44%);
-  --ocean-top-color: hsl(201, 65%, 44%);
-  --ocean-color-lighter: hsl(213, 65%, 48%);
-
-  --ocean-color-darker: hsl(213, 100%, 26%);
+  --ocean-top-color: hsl(189, 65%, 44%);
   --ocean-color-dark: hsl(213, 100%, 17%);
   --ocean-height: 800vh;
 
-  --lucht-light-color: hsl(51, 100%, 50%);
-  --lucht-dark-color: hsl(25, 75%, 47%);
-  --lucht-color: hsl(51, 100%, 50%);
+  --lucht-color: gold;
 
-  --sun-color: hsl(42, 100%, 88%);
+  --sun-color: oldlace;
 
-  --cloud-color: hsl(0, 0%, 37%);
-  --thunder-cloud-color: hsl(0, 0%, 0%);
+  --cloud-color: slategray;
+  --thunder-cloud-color: black;
 
   --rain-color: hsl(208, 100%, 66%);
-  --snow-color: hsl(0, 0%, 100%);
+  --snow-color: white;
   --snow-filter: drop-shadow(5vw 5vh 0.2rem var(--snow-color))
     drop-shadow(-6vw -10vh 0.1rem var(--snow-color));
 
-  --boat-primary-color: hsl(0, 70%, 42%);
-  --boat-secondary-color: hsl(0, 0%, 100%);
-  --boat-tertiary-color: hsl(211, 12%, 52%);
+  --boat-primary-color: crimson;
+  --boat-secondary-color: white;
+  --boat-tertiary-color: lightsteelblue;
 
   --water-color: hsl(211, 56%, 52%);
   --bubble-color: hsl(207, 64%, 71%);
@@ -41,8 +36,6 @@
   --electricity-color: hsl(52, 100%, 85%);
 
   --metal-color: hsl(0, 0%, 62%);
-  --metal-color-lighter: hsl(0, 0%, 71%);
-  --metal-color-darker: hsl(0, 0%, 38%);
 
   --shadow-color-base: hsla(0, 0%, 0%, 0.5);
   --shadow-p: 80%;

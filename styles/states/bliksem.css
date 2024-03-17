@@ -1,16 +1,7 @@
 body:has(input[value='bliksem']:checked) {
-  --lucht-dark-color: #0b0e17;
-  --lucht-light-color: #1f2438;
+  --lucht-color: #1f2438;
 
   main {
-    background: linear-gradient(
-      in okLCH,
-      color-mix(in okLCH, var(--ocean-color), black 20%) 0 10%,
-      color-mix(in okLCH, var(--ocean-color), black 60%),
-      color-mix(in okLCH, var(--ocean-color), black 80%),
-      black 70%
-    );
-
     /* lucht */
     > div:first-of-type {
       > span:first-of-type {
@@ -48,8 +39,8 @@ body:has(input[value='bliksem']:checked) {
       /* knop */
       nav form > div > div > div:nth-of-type(2) {
         background: radial-gradient(
-          var(--lucht-light-color),
-          var(--lucht-dark-color)
+          var(--lucht-color),
+          color-mix(in okLCH, var(--lucht-color), black 50%)
         );
         animation: knopje-gloeit 1s infinite ease-in-out alternate paused;
 

@@ -2,8 +2,7 @@ body:has(input[value='regen']:checked) {
   main {
     /* lucht */
     > div:first-of-type {
-      --lucht-dark-color: #335169;
-      --lucht-light-color: #2e3c47;
+      --lucht-color: #2e3c47;
 
       /* zonnetje */
       > span:first-of-type {
@@ -14,7 +13,6 @@ body:has(input[value='regen']:checked) {
 
       > span:nth-of-type(2),
       > span:nth-of-type(3) {
-        --cloud-color: #8a8a8a;
         transform: translateY(0);
       }
 

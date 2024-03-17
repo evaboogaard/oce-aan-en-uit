@@ -1,13 +1,49 @@
 main {
   /* oceaan kleurtje */
-  background: linear-gradient(
-    in okLCH,
-    var(--ocean-top-color) 0 10%,
-    color-mix(in okLCH, var(--ocean-color), black 10%) 50%,
-    color-mix(in okLCH, var(--ocean-color), black 50%),
-    black 80%
-  );
+  background: radial-gradient(
+      circle at top in okLCH,
+      color-mix(in okLCH, var(--ocean-top-color), white 30%),
+      transparent 12%
+    ),
+    linear-gradient(
+      to right in okLCH,
+      hsla(0, 0%, 0%, 0.7),
+      transparent,
+      hsla(0, 0%, 0%, 0.7)
+    ),
+    linear-gradient(
+      in okLCH,
+      var(--ocean-top-color) 0 10%,
+      color-mix(in okLCH, var(--ocean-color), black 10%) 50%,
+      color-mix(in okLCH, var(--ocean-color), black 50%),
+      black 80%
+    );
+
   height: var(--ocean-height);
+
+  /* --zeegroen-50: LightSeaGreen;
+  --zeegroen-37: color-mix(in oklch, LightSeaGreen, Black 25%);
+
+  --zeeblauw-75: color-mix(in oklch, SteelBlue, white 50%);
+  --zeeblauw-50: SteelBlue;
+  --zeeblauw-25: color-mix(in oklch, SteelBlue, Black 50%);
+  --zeeblauw-12: color-mix(in oklch, SteelBlue, Black 75%);
+  --zeeblauw-0: color-mix(in oklch, SteelBlue, Black 100%);
+
+  background-image: radial-gradient(
+      circle at 50% 0 in oklch,
+      #ffd70033,
+      #ffa50033,
+      #dc143c33 10em,
+      transparent 75%
+    ),
+    radial-gradient(
+      in oklch,
+      transparent,
+      color-mix(in oklch, var(--zeeblauw-12), transparent 75%) min(20vmin, 10em),
+      var(--zeeblauw-12)
+    ),
+    linear-gradient(in oklch, var(--zeegroen-50), var(--zeeblauw-25)); */
 
   /* cirkeltjes onder boot */
   /* gejat van https://codepen.io/shooft/pen/WNWoRQv?editors=1100 */

@@ -13,8 +13,8 @@ main > div:first-of-type {
   height: 50vh;
   background: radial-gradient(
     in okLCH,
-    var(--lucht-light-color) var(--p),
-    var(--lucht-dark-color)
+    var(--lucht-color) var(--p),
+    color-mix(in okLCH, var(--lucht-color), black 70%)
   );
   background-size: 150% 150%;
   background-position: top center;

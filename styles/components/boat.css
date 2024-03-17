@@ -23,7 +23,7 @@ main > div:nth-of-type(2) {
 
     /* bootje */
     > div:first-of-type {
-      z-index: 100;
+      /* z-index: 100; */
       position: relative;
       background-image: linear-gradient(
           60deg in okLCH,
@@ -89,7 +89,7 @@ main > div:nth-of-type(2) {
       width: 2rem;
       aspect-ratio: 1;
       border-radius: 50%;
-      background-color: #f09;
+      /* background-color: #f09; */
       bottom: 5rem;
       left: 2rem;
 
@@ -202,7 +202,7 @@ main > div:nth-of-type(2) {
         background: linear-gradient(
           45deg in okLCH,
           #d8d8d8 40%,
-          var(--ocean-color)
+          var(--boat-tertiary-color)
         );
         border: 5px ridge var(--boat-tertiary-color);
         border-radius: 50%;

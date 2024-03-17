@@ -424,7 +424,7 @@ main nav {
               90deg in okLCH,
 
               var(--metal-color) 23%,
-              var(--metal-color-lighter) 23% 77%,
+              color-mix(in okLCH, var(--metal-color), white 40%) 23% 77%,
               var(--metal-color) 77%
             );
             position: absolute;
@@ -606,7 +606,7 @@ main nav {
             background: radial-gradient(
               in okLCH,
               var(--metal-color),
-              var(--metal-color-darker)
+              color-mix(in okLCH, var(--metal-color), black 40%)
             );
             position: absolute;
             width: 0.2rem;
@@ -654,7 +654,7 @@ main nav {
               background: radial-gradient(
                 in okLCH,
                 var(--metal-color),
-                var(--metal-color-darker)
+                color-mix(in okLCH, var(--metal-color), black 40%)
               );
               position: absolute;
               border-radius: 1rem;
