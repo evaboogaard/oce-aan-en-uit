@@ -2,6 +2,25 @@ body:has(input[value='bliksem']:checked) {
   --lucht-color: #1f2438;
 
   main {
+    background: radial-gradient(
+        circle at top in okLCH,
+        color-mix(in okLCH, var(--ocean-top-color), white 50%),
+        transparent 10%
+      ),
+      linear-gradient(
+        to right in okLCH,
+        hsla(0, 0%, 0%, 0.8),
+        transparent,
+        hsla(0, 0%, 0%, 0.8)
+      ),
+      linear-gradient(
+        in okLCH,
+        color-mix(in okLCH, var(--ocean-top-color), black 20%) 0 10%,
+        color-mix(in okLCH, var(--ocean-color), black 40%) 50%,
+        color-mix(in okLCH, var(--ocean-color), black 70%),
+        black 80%
+      );
+
     /* lucht */
     > div:first-of-type {
       > span:first-of-type {
