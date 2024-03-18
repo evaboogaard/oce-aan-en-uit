@@ -17,6 +17,8 @@ ik heb mijn best gedaan om zo nu en dan een workshopje bij te wonen, dit is wat 
 ![](./img/process/wrkshps/9.png)
 ![](./img/process/wrkshps/10.png)
 ![](./img/process/wrkshps/11.png)
+![](./img/process/wrkshps/12.png)
+![](./img/process/wrkshps/13.png)
 
 ## proces
 
@@ -104,6 +106,16 @@ dit is hoe de states er uiteindelijk uit zien na wat gekloot
 ![](./img/process/w3/state2.png)
 ![](./img/process/w3/state3.png)
 ![](./img/process/w3/state4.png)
+
+### week 4
+
+snowflake is stom. ik snap t niet.
+![](./img/process/w4/snowflake-1.png)
+![](./img/process/w4/snowflake-2.png)
+
+titel = echt een tragedie.
+![](./img/process/w4/titel-1.png)
+![](./img/process/w4/titel-2.png)
 
 ## bronnenlijst
 

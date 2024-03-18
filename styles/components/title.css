@@ -1,0 +1,111 @@
+/* @font-face {
+  font-family: 'water';
+  src: url('../../assets/water.ttf');
+}
+
+@font-face {
+  font-family: 'electricity';
+  src: url('../../assets/electricity.ttf');
+}
+
+@font-face {
+  font-family: 'ice';
+  src: url('../../assets/ice.ttf');
+}
+
+@font-face {
+  font-family: 'sun';
+  src: url('../../assets/sun.otf');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+
+main > div:last-of-type {
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle at 100% in oklch,
+    var(--ocean-color),
+    black
+  );
+  transform: translateZ(100rem);
+  z-index: 2000;
+  top: 0;
+  position: fixed;
+  animation: ga-weg 0.000001s linear forwards 10s;
+
+  p {
+    --initial-delay: 0.5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Changa';
+    text-transform: uppercase;
+    font-size: 2rem;
+    animation: hollywood 10s forwards ease-out;
+
+    span {
+      --start-delay: var(--initial-delay);
+      animation: opacity-ani 2s var(--start-delay) both;
+    }
+
+    span:nth-of-type(2) {
+      --start-delay: calc(var(--initial-delay) * 2);
+    }
+
+    span:nth-of-type(3) {
+      --start-delay: calc(var(--initial-delay) * 3);
+    }
+
+    span:nth-of-type(4) {
+      --start-delay: calc(var(--initial-delay) * 4);
+    }
+
+    span:nth-of-type(5) {
+      --start-delay: calc(var(--initial-delay) * 5);
+    }
+
+    span:nth-of-type(6) {
+      --start-delay: calc(var(--initial-delay) * 6);
+    }
+
+    span:nth-of-type(7) {
+      --start-delay: calc(var(--initial-delay) * 7);
+    }
+  }
+}
+
+@keyframes hollywood {
+  0% {
+    gap: 20vw;
+  }
+
+  100% {
+    gap: 4vw;
+  }
+}
+
+@keyframes opacity-ani {
+  0% {
+    opacity: 0;
+    filter: blur(1rem);
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0em);
+    transform: translateY(0);
+  }
+}
+
+@keyframes ga-weg {
+  to {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
