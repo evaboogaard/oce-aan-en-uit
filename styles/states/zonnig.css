@@ -32,6 +32,7 @@ body:has(input[value='zonnig']:checked) {
     }
 
     > div:first-of-type {
+      --sun-glow-size: 75%;
       animation:
         stralen1 103s infinite linear,
         stralen2 111s infinite linear;
@@ -39,9 +40,9 @@ body:has(input[value='zonnig']:checked) {
       background-image: radial-gradient(
           circle at bottom in okLCH,
           color-mix(in okLCH, var(--lucht-color), red 0%),
-          color-mix(in okLCH, var(--lucht-color), red 15%) 8rem,
-          color-mix(in okLCH, var(--lucht-color), red 30%) 10rem,
-          transparent 75%
+          color-mix(in okLCH, var(--lucht-color), red 15%) 6rem,
+          color-mix(in okLCH, var(--lucht-color), red 30%) 9rem,
+          transparent var(--sun-glow-size)
         ),
         repeating-conic-gradient(
           from var(--angle1, 13deg) at bottom in okLCH,
@@ -70,6 +71,10 @@ body:has(input[value='zonnig']:checked) {
       background-size: 100%;
       background-position: top;
       background-repeat: no-repeat;
+
+      @media (min-width: 800px) {
+        --sun-glow-size: 55%;
+      }
 
       > span:first-of-type {
         transform: translateY(8vh);

@@ -148,6 +148,7 @@ dit is hoe de states er uiteindelijk uit zien na wat gekloot
 - https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode
 - https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
 - https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
+- https://css-tricks.com/the-shapes-of-css/
 
 ## to do
 

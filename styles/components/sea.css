@@ -21,30 +21,6 @@ main {
 
   height: var(--ocean-height);
 
-  /* --zeegroen-50: LightSeaGreen;
-  --zeegroen-37: color-mix(in oklch, LightSeaGreen, Black 25%);
-
-  --zeeblauw-75: color-mix(in oklch, SteelBlue, white 50%);
-  --zeeblauw-50: SteelBlue;
-  --zeeblauw-25: color-mix(in oklch, SteelBlue, Black 50%);
-  --zeeblauw-12: color-mix(in oklch, SteelBlue, Black 75%);
-  --zeeblauw-0: color-mix(in oklch, SteelBlue, Black 100%);
-
-  background-image: radial-gradient(
-      circle at 50% 0 in oklch,
-      #ffd70033,
-      #ffa50033,
-      #dc143c33 10em,
-      transparent 75%
-    ),
-    radial-gradient(
-      in oklch,
-      transparent,
-      color-mix(in oklch, var(--zeeblauw-12), transparent 75%) min(20vmin, 10em),
-      var(--zeeblauw-12)
-    ),
-    linear-gradient(in oklch, var(--zeegroen-50), var(--zeeblauw-25)); */
-
   /* cirkeltjes onder boot */
   /* gejat van https://codepen.io/shooft/pen/WNWoRQv?editors=1100 */
   > div:nth-of-type(3) {
@@ -61,13 +37,16 @@ main {
       width: 36rem;
       aspect-ratio: 36/6;
       background-image: repeating-radial-gradient(
-        in oklch,
-        color-mix(in oklch, var(--ocean-top-color), black 40%) calc(100% - 3rem),
-        color-mix(in oklch, var(--ocean-top-color), transparent 75%) 100%
+        farthest-side in oklch,
+        #fff9 calc(100% - 3em),
+        #0000 calc(100% - 1em),
+        #fff6 100%
       );
       background-position: center;
       background-repeat: no-repeat;
       mask: radial-gradient(farthest-side, red, #f003 35%, #f000);
+      mix-blend-mode: overlay;
+      backdrop-filter: blur(0.5em);
     }
   }
 

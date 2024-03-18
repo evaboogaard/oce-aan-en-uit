@@ -1,9 +1,4 @@
 :root {
-  --fish-primary-color: yellow;
-  --fish-primary-color-darker: gold;
-  --fish-secondary-color: orange;
-  --fish-secondary-color-darker: darkorange;
-  --fish-tertiary-color: red;
   --fish-teeth-color: white;
   --fish-eye-color: black;
 
@@ -41,9 +36,20 @@ svg:has(use) {
 */
 
 #visje {
-  --fish-primary-color: #e5b651;
-  --fish-primary-color-darker: #d5a144;
-  --fish-secondary-color: #e8dfab;
+  --fpc-default: #e5b651;
+  --fpcd-default: #d5a144;
+  --fsc-default: #e8dfab;
+  --rpc-default: white;
+  --ipc-default: #ff4400;
+  --isc-default: #a12727;
+
+  --fish-primary-color: var(--fpc, var(--fpc-default));
+  --fish-primary-color-darker: var(--fpcd, var(--fpcd-default));
+  --fish-secondary-color: var(--fsc, var(--fsc-default));
+  --rain-primary-color: var(--rpc, var(--rpc-default));
+  --ice-primary-color: var(--ipc, var(--ipc-default));
+  --ice-secondary-color: var(--isc, var(--isc-default));
+
   /* staart boven */
   > path:first-of-type {
     fill: var(--fish-secondary-color);
@@ -89,7 +95,7 @@ svg:has(use) {
   /* regen */
   > g:nth-last-child(2) {
     display: none;
-    fill: white;
+    fill: var(--rain-primary-color);
     opacity: 0.2;
   }
 
@@ -98,11 +104,11 @@ svg:has(use) {
     display: none;
     path {
       &:first-of-type {
-        fill: #ff4400;
+        fill: var(--ice-primary-color);
       }
 
       &:last-of-type {
-        fill: #a12727;
+        fill: var(--ice-secondary-color);
       }
     }
   }
@@ -118,24 +124,39 @@ svg:has(use[href='#visje']) {
 }
 
 svg:nth-child(1 of :has(use[href='#visje'])) {
-  --delay: -20s;
-  top: 100vh;
+  --delay: -25s;
+  top: 80vh;
 }
 
 svg:nth-child(2 of :has(use[href='#visje'])) {
-  --delay: -25s;
-  top: 80vh;
+  --delay: -20s;
+  --fpc: indianred;
+  --fpcd: firebrick;
+  --fsc: darkslategrey;
+  --ipc: gold;
+  --isc: ivory;
+  top: 100vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(3 of :has(use[href='#visje'])) {
   --delay: -18s;
+  --fpc: darkorange;
+  --fpcd: chocolate;
+  --fsc: darkslategrey;
+  --ipc: darkred;
+  --isc: crimson;
   top: 120vh;
   filter: var(--fish-deeper);
 }
 
 svg:nth-child(4 of :has(use[href='#visje'])) {
   --delay: -15s;
+  --fpc: darkorchid;
+  --fpcd: darkslateblue;
+  --fsc: palegoldenrod;
+  --ipc: gold;
+  --isc: ivory;
   top: 200vh;
 }
 
@@ -146,11 +167,25 @@ svg:nth-child(4 of :has(use[href='#visje'])) {
 */
 
 #tonijn {
-  --fish-primary-color: #5487c6;
-  --fish-primary-color-darker: #3f659e;
-  --fish-secondary-color: #c1e0e6;
-  --fish-secondary-color-darker: #81a1ae;
-  --fish-tertiary-color: #f4d384;
+  --fpc-default: #5487c6;
+  --fpcd-default: #3f659e;
+  --fsc-default: #c1e0e6;
+  --fscd-default: #81a1ae;
+  --ftc-default: #f4d384;
+  --rpc-default: rgb(179, 113, 0);
+  --rsc-default: rgb(217, 159, 0);
+  --ipc-default: rgb(19, 145, 14);
+  --isc-default: rgb(90, 183, 69);
+
+  --fish-primary-color: var(--fpc, var(--fpc-default));
+  --fish-primary-color-darker: var(--fpcd, var(--fpcd-default));
+  --fish-secondary-color: var(--fsc, var(--fsc-default));
+  --fish-secondary-color-darker: var(--fscd, var(--fscd-default));
+  --fish-tertiary-color: var(--ftc, var(--ftc-default));
+  --rain-primary-color: var(--rpc, var(--rpc-default));
+  --rain-secondary-color: var(--rsc, var(--rsc-default));
+  --ice-primary-color: var(--ipc, var(--ipc-default));
+  --ice-secondary-color: var(--isc, var(--isc-default));
 
   /* staart onder */
   > g:first-of-type {
@@ -203,11 +238,11 @@ svg:nth-child(4 of :has(use[href='#visje'])) {
   > g:nth-last-child(2) {
     display: none;
     > g {
-      fill: rgb(179, 113, 0);
+      fill: var(--rain-primary-color);
       > g {
         clip-path: url(#clippath-1);
         path {
-          fill: rgb(217, 159, 0);
+          fill: var(--rain-secondary-color);
         }
       }
     }
@@ -217,10 +252,10 @@ svg:nth-child(4 of :has(use[href='#visje'])) {
   > g:nth-last-child(1) {
     display: none;
     path {
-      fill: rgb(19, 145, 14);
+      fill: var(--ice-primary-color);
 
       &:first-of-type {
-        fill: rgb(90, 183, 69);
+        fill: var(--ice-secondary-color);
       }
     }
   }
@@ -244,18 +279,45 @@ svg:nth-child(1 of :has(use[href='#tonijn'])) {
 svg:nth-child(2 of :has(use[href='#tonijn'])) {
   --delay: -30s;
   --fish-size: 8rem;
+  --fpc: rebeccapurple;
+  --fpcd: slateblue;
+  --fsc: plum;
+  --fscd: pink;
+  --ftc: wheat;
+  --rpc: blue;
+  --rsc: royalblue;
+  --ipc: salmon;
+  --isc: darksalmon;
   top: 200vh;
 }
 
 svg:nth-child(3 of :has(use[href='#tonijn'])) {
   --delay: -26s;
   --fish-size: 9rem;
+  --fpc: #335f99;
+  --fpcd: #81a3cb;
+  --fsc: #ffffff;
+  --fscd: #afdedd;
+  --ftc: #b67600;
+  --rpc: #535394;
+  --rsc: #4f629c;
+  --ipc: #860d00;
+  --isc: #765144;
   top: 250vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(4 of :has(use[href='#tonijn'])) {
   --delay: -12s;
+  --fpc: #0c3061;
+  --fpcd: #28507d;
+  --fsc: #9e9e9e;
+  --fscd: #409f9e;
+  --ftc: #b67600;
+  --rpc: #535394;
+  --rsc: #4f9c4f;
+  --ipc: #8d3d35;
+  --isc: #764473;
   top: 350vh;
   filter: var(--fish-deeper);
 }
@@ -267,9 +329,17 @@ svg:nth-child(4 of :has(use[href='#tonijn'])) {
 */
 
 #kwal {
-  --fish-primary-color: #b3c8d0;
-  --fish-primary-color-darker: #88a1aa;
-  --fish-secondary-color: #a3c9d9;
+  --fpc-default: #b3c8d0;
+  --fpcd-default: #88a1aa;
+  --fsc-default: #a3c9d9;
+  --rpc-default: rgb(162, 2, 2);
+  --ipc-default: white;
+
+  --fish-primary-color: var(--fpc, var(--fpc-default));
+  --fish-primary-color-darker: var(--fpcd, var(--fpcd-default));
+  --fish-secondary-color: var(--fsc, var(--fsc-default));
+  --rain-primary-color: var(--rpc, var(--rpc-default));
+  --ice-primary-color: var(--ipc, var(--ipc-default));
 
   /* tentakels */
   > g:first-of-type {
@@ -313,7 +383,7 @@ svg:nth-child(4 of :has(use[href='#tonijn'])) {
   /* ijskoud */
   > g:nth-last-child(1) {
     display: none;
-    fill: white;
+    fill: var(--ice-primary-color);
     opacity: 0.2;
   }
 
@@ -322,14 +392,14 @@ svg:nth-child(4 of :has(use[href='#tonijn'])) {
     display: none;
     > g {
       > path {
-        fill: rgb(162, 2, 2);
+        fill: var(--rain-primary-color);
       }
 
       > g {
         clip-path: url(#clippath-1);
 
         > path {
-          fill: yellow;
+          fill: var(--rain-secondary-color);
         }
       }
     }
@@ -350,18 +420,28 @@ svg:nth-child(1 of :has(use[href='#kwal'])) {
 
 svg:nth-child(2 of :has(use[href='#kwal'])) {
   --float-position: 75vw;
+  --fpc: #79df2b;
+  --fpcd: #d0d0d0;
+  --fsc: #cce7f2;
+  --rpc: #eeb950;
   top: 300vh;
 }
 
 svg:nth-child(3 of :has(use[href='#kwal'])) {
   --float-position: 40vw;
-
+  --fpc: #8ecee5;
+  --fpcd: #56b3d0;
+  --fsc: #e9d6c5;
+  --rpc: #62ee50;
   top: 350vh;
 }
 
 svg:nth-child(4 of :has(use[href='#kwal'])) {
   --float-position: 0vw;
-
+  --fpc: #ff0000;
+  --fpcd: #ff0000;
+  --fsc: #92b1fb;
+  --rpc: #505dee;
   top: 400vh;
   filter: var(--fish-deep);
 }
@@ -373,9 +453,18 @@ svg:nth-child(4 of :has(use[href='#kwal'])) {
 */
 
 #haaitje {
-  --fish-primary-color: #949a9a;
-  --fish-secondary-color: #bbbfbf;
-  --fish-teeth-color: #fff;
+  --fpc-default: #949a9a;
+  --fsc-default: #bbbfbf;
+  --rpc-default: steelblue;
+  --rsc-default: palevioletred;
+  --ipc-default: rgb(130, 48, 168);
+  --isc-default: rgb(108, 35, 142);
+  --fish-primary-color: var(--fpc, var(--fpc-default));
+  --fish-secondary-color: var(--fsc, var(--fsc-default));
+  --rain-primary-color: var(--rpc, var(--rpc-default));
+  --rain-secondary-color: var(--rsc, var(--rsc-default));
+  --ice-primary-color: var(--ipc, var(--ipc-default));
+  --ice-secondary-color: var(--isc, var(--isc-default));
 
   /* tandjes */
   > g:first-of-type {
@@ -420,11 +509,11 @@ svg:nth-child(4 of :has(use[href='#kwal'])) {
   > g:nth-last-child(2) {
     display: none;
     > g {
-      fill: steelblue;
+      fill: var(--rain-primary-color);
       > g {
         clip-path: url(#clippath-2);
 
-        fill: palevioletred;
+        fill: var(--rain-secondary-color);
       }
     }
   }
@@ -434,11 +523,11 @@ svg:nth-child(4 of :has(use[href='#kwal'])) {
     display: none;
     path {
       &:first-of-type {
-        fill: rgb(130, 48, 168);
+        fill: var(--ice-primary-color);
       }
 
       &:last-of-type {
-        fill: rgb(108, 35, 142);
+        fill: var(--ice-secondary-color);
       }
     }
   }
@@ -461,17 +550,35 @@ svg:nth-child(1 of :has(use[href='#haaitje'])) {
 
 svg:nth-child(2 of :has(use[href='#haaitje'])) {
   --delay: -18s;
+  --fpc: #6597ae;
+  --fsc: #89b1c5;
+  --rpc: #46b4a0;
+  --rsc: #8cd870;
+  --ipc: #a83030;
+  --isc: #8e2323;
   top: 380vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(3 of :has(use[href='#haaitje'])) {
   --delay: -22s;
+  --fpc: #5f7777;
+  --fsc: #7da8a8;
+  --rpc: rgb(125, 70, 180);
+  --rsc: rgb(124, 112, 216);
+  --ipc: rgb(255, 241, 132);
+  --isc: rgb(255, 197, 62);
   top: 300vh;
 }
 
 svg:nth-child(4 of :has(use[href='#haaitje'])) {
   --delay: -27s;
+  --fpc: #5f6263;
+  --fsc: #878e8e;
+  --rpc: rgb(125, 112, 85);
+  --rsc: rgb(164, 131, 142);
+  --ipc: rgb(109, 89, 180);
+  --isc: rgb(78, 44, 94);
   top: 450vh;
 }
 
@@ -481,10 +588,22 @@ svg:nth-child(4 of :has(use[href='#haaitje'])) {
 ###############
 */
 #turtle {
-  --fish-primary-color: #55ab45;
-  --fish-primary-color-darker: #3a8d35;
-  --fish-secondary-color: #b3cd9a;
-  --fish-secondary-color-darker: #a3bf86;
+  --fpc-default: #55ab45;
+  --fpcd-default: #3a8d35;
+  --fsc-default: #b3cd9a;
+  --fscd-default: #a3bf86;
+  --rpc-default: orangered;
+  --rsc-default: salmon;
+  --ipc-default: #936310;
+  --isc-default: #936310;
+  --fish-primary-color: var(--fpc, var(--fpc-default));
+  --fish-primary-color-darker: var(--fpcd, var(--fpcd-default));
+  --fish-secondary-color: var(--fsc, var(--fsc-default));
+  --fish-secondary-color-darker: var(--fscd, var(--fscd-default));
+  --rain-primary-color: var(--rpc, var(--rpc-default));
+  --rain-secondary-color: var(--rsc, var(--rsc-default));
+  --ice-primary-color: var(--ipc, var(--ipc-default));
+  --ice-secondary-color: var(--isc, var(--isc-default));
 
   /* vin achter */
   > g:first-of-type {
@@ -565,7 +684,7 @@ svg:nth-child(4 of :has(use[href='#haaitje'])) {
   > g:nth-last-child(1) {
     display: none;
     path {
-      fill: rgb(147, 99, 16);
+      fill: var(--ice-primary-color);
       &:nth-of-type(3) {
         fill: rgb(72, 45, 11);
       }
@@ -579,10 +698,10 @@ svg:nth-child(4 of :has(use[href='#haaitje'])) {
       fill: black;
     }
     > g {
-      fill: orangered;
+      fill: var(--rain-primary-color);
       > g {
         clip-path: url(#clippath-4);
-        fill: salmon;
+        fill: var(--rain-secondary-color);
       }
     }
   }
@@ -605,17 +724,37 @@ svg:nth-child(1 of :has(use[href='#turtle'])) {
 
 svg:nth-child(2 of :has(use[href='#turtle'])) {
   --delay: -18s;
+  --fpc: #3f9031;
+  --fpcd: #20601c;
+  --fsc: #a0cd9a;
+  --fscd: #6fad6f;
+  --rpc: #d9896d;
+  --rsc: #d7b99c;
+  --ipc: #6b4d1b;
+  --isc: #000000;
   top: 250vh;
 }
 
 svg:nth-child(3 of :has(use[href='#turtle'])) {
   --delay: -5s;
+  --fpc: #558d4b;
+  --fpcd: #1d451a;
+  --fsc: #badcb6;
+  --fscd: #a3c5a3;
+  --rpc: #6d9fd9;
+  --rsc: #6372d7;
+  --ipc: #7c6744;
+  --isc: #3d2c14;
   top: 350vh;
   filter: var(--fish-deep);
 }
 
 svg:nth-child(4 of :has(use[href='#turtle'])) {
   --delay: -14s;
+  --rpc: #a16dd9;
+  --rsc: #8863d7;
+  --ipc: #7a6c53;
+  --isc: #392f21;
   top: 300vh;
   filter: var(--fish-deeper);
 }
@@ -626,9 +765,16 @@ svg:nth-child(4 of :has(use[href='#turtle'])) {
 ###############
 */
 #plankton {
-  --fish-primary-color: #d6c5b5;
-  --fish-primary-color-darker: #1d1d1b;
-  --fish-secondary-color: white;
+  --fpc-default: #d6c5b5;
+  --fpcd-default: #1d1d1b;
+  --fsc-default: white;
+  --fish-primary-color: var(--fpc, var(--fpc-default));
+  --fish-primary-color-darker: var(--fpcd, var(--fpcd-default));
+  --fish-secondary-color: var(--fsc, var(--fsc-default));
+  --rain-primary-color: var(--rpc, var(--rpc-default));
+  --rain-secondary-color: var(--rsc, var(--rsc-default));
+  --ice-primary-color: var(--ipc, var(--ipc-default));
+  --ice-secondary-color: var(--isc, var(--isc-default));
 
   /* lichaam */
   > g:first-of-type {
@@ -699,10 +845,21 @@ svg:nth-child(4 of :has(use[href='#plankton'])) {
 */
 
 #anglerfish {
-  --fish-primary-color: hsl(30, 43%, 30%);
-  --fish-primary-color-darker: hsl(31, 45%, 24%);
-  --fish-secondary-color: hsl(51, 50%, 77%);
+  --fpc-default: #6d4d2c;
+  --fpcd-default: #593e22;
+  --fsc-default: #e2d9a7;
   --fish-teeth-color: #d8c6a4;
+  --rpc-default: yellow;
+  --rsc-default: gold;
+  --ipc-default: pink;
+  --isc-default: #f09;
+  --fish-primary-color: var(--fpc, var(--fpc-default));
+  --fish-primary-color-darker: var(--fpcd, var(--fpcd-default));
+  --fish-secondary-color: var(--fsc, var(--fsc-default));
+  --rain-primary-color: var(--rpc, var(--rpc-default));
+  --rain-secondary-color: var(--rsc, var(--rsc-default));
+  --ice-primary-color: var(--ipc, var(--ipc-default));
+  --ice-secondary-color: var(--isc, var(--isc-default));
 
   /* tanden */
   > g:first-of-type {
@@ -760,15 +917,15 @@ svg:nth-child(4 of :has(use[href='#plankton'])) {
     display: none;
 
     > path:first-of-type {
-      fill: pink;
+      fill: var(--ice-primary-color);
     }
 
     > path:nth-of-type(2) {
-      fill: #f09;
+      fill: var(--ice-secondary-color);
     }
 
     > path:nth-of-type(3) {
-      fill: #f09;
+      fill: var(--ice-secondary-color);
     }
   }
 
@@ -777,15 +934,15 @@ svg:nth-child(4 of :has(use[href='#plankton'])) {
     display: none;
 
     > path:first-of-type {
-      fill: yellow;
+      fill: var(--rain-primary-color);
     }
 
     > path:nth-of-type(2) {
-      fill: gold;
+      fill: var(--rain-secondary-color);
     }
 
     > path:nth-of-type(3) {
-      fill: yellow;
+      fill: var(--rain-primary-color);
     }
   }
 }
@@ -807,6 +964,13 @@ svg:nth-child(1 of :has(use[href='#anglerfish'])) {
 svg:nth-child(2 of :has(use[href='#anglerfish'])) {
   --delay: -25s;
   --fish-size: 8rem;
+  --fpc: #523a22;
+  --fpcd: #392815;
+  --fsc: #ebd971;
+  --rpc: #ffe100;
+  --rsc: #e8b600;
+  --ipc: #ffa3b3;
+  --isc: #9300b4;
   top: 730vh;
   filter: var(--fish-deep);
 }
@@ -814,6 +978,13 @@ svg:nth-child(2 of :has(use[href='#anglerfish'])) {
 svg:nth-child(3 of :has(use[href='#anglerfish'])) {
   --delay: -16s;
   --fish-size: 6rem;
+  --fpc: #44311d;
+  --fpcd: #302110;
+  --fsc: #ddd6af;
+  --rpc: #008e42;
+  --rsc: #19793c;
+  --ipc: #ffeda3;
+  --isc: #510f0f;
   top: 780vh;
   filter: var(--fish-deep);
 }
@@ -821,5 +992,12 @@ svg:nth-child(3 of :has(use[href='#anglerfish'])) {
 svg:nth-child(4 of :has(use[href='#anglerfish'])) {
   --delay: -16s;
   --fish-size: 9rem;
+  --fpc: #44311d;
+  --fpcd: #302110;
+  --fsc: #ddd6af;
+  --rpc: #005f8e;
+  --rsc: #196179;
+  --ipc: #a3ffeb;
+  --isc: #0f4151;
   top: 680vh;
 }

@@ -31,16 +31,20 @@
                     id="bliksem"
                     value="bliksem"
                     name="weer"
-                    checked
                   />
                 </label>
 
                 <label for="ijskoud">
+                  <div>
+                    <span></span>
+                    <span></span>
+                  </div>
                   <input
                     type="radio"
                     id="ijskoud"
                     value="ijskoud"
                     name="weer"
+                    checked
                   />
                 </label>
 
@@ -72,7 +76,10 @@
               </div>
 
               <!-- vriezen knopje -->
-              <div></div>
+              <div>
+                <span></span>
+                <span></span>
+              </div>
 
               <!-- zonnig knopje -->
               <div>
@@ -101,7 +108,6 @@
                   type="checkbox"
                   id="open-en-dicht"
                   value="open-en-dicht"
-                  checked
                 />
               </label>
             </fieldset>
@@ -148,7 +154,76 @@
         <!-- bootje container om te slepen -->
         <div>
           <!-- bootje basis -->
-          <div></div>
+          <div>
+            <!-- sneeuwpopje -->
+            <div>
+              <!-- hoofd -->
+              <span>
+                <!-- hoed -->
+                <span></span>
+                <!-- oogjes -->
+                <span></span>
+                <!-- wortel -->
+                <span></span>
+              </span>
+              <!-- lichaam boven -->
+              <span>
+                <!-- arm -->
+                <span>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div>
+                              <div>
+                                <div>
+                                  <div>
+                                    <div>
+                                      <div></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+
+                <span>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div>
+                              <div>
+                                <div>
+                                  <div>
+                                    <div>
+                                      <div></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </span>
+              </span>
+
+             
+            <!-- lichaam onder -->
+            <span></span>
+            </div>
+          </div>
           <!-- vlaggetje -->
           <v></v>
           <!-- raampjes -->
@@ -162,11 +237,6 @@
             <r></r>
             <r></r>
             <r></r>
-          </div>
-
-          <!-- sneeuwpopje -->
-          <div>
-            <span> </span>
           </div>
         </div>
       </div>
@@ -2831,24 +2901,27 @@
       </defs>
     </svg>
 
-    <!-- <svg>
+    <svg>
       <defs>
         <filter id="blobby">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+          <!-- eerst een grote blur -->
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
 
+          <!-- dan 'contrast' van alpha channel vergroten -->
           <feColorMatrix
             mode="matrix"
             values="
                                  1  0  0  0  0
                                  0  1  0  0  0
                                  0  0  1  0  0
-                                 0  0  0  50  -24"
+                                 0  0  0  100  -48"
             result="blob"
           />
 
-          <feBlend in="SourceGraphic" in2="blob" />
+          <!-- de blur mixen met de oorspronkelijke vorm -->
+          <!-- 				<feBlend in="SourceGraphic" in2="blob" /> -->
         </filter>
       </defs>
-    </svg> -->
+    </svg>
   </body>
 </html>

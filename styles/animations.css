@@ -213,6 +213,22 @@
   }
 }
 
+@keyframes ijs-knopje-gloeit {
+  0% {
+    box-shadow: 0 0 0.2rem white;
+    filter: hue-rotate(20deg);
+  }
+
+  50% {
+    box-shadow: 0 0 1.5rem white;
+  }
+
+  100% {
+    box-shadow: 0 0 0.2rem white;
+    filter: hue-rotate(-80deg);
+  }
+}
+
 @keyframes shark-tail {
   0% {
     transform: rotateY(15deg);
@@ -359,5 +375,24 @@
 
   to {
     transform: rotate(1deg);
+  }
+}
+
+@keyframes sneeuwvlokje {
+  from {
+    scale: 0.5;
+  }
+
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes schwing {
+  from {
+    transform: translateY(4px) translateX(-2px) rotate(3deg);
+  }
+  to {
+    transform: translateY(4px) translateX(2px) rotate(-3deg);
   }
 }
