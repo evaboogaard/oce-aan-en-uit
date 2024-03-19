@@ -127,9 +127,6 @@
           <k></k>
           <k></k>
           <k></k>
-
-          <!-- alien -->
-          <div></div>
         </span>
         <!-- wolkjes -->
         <span>
@@ -2846,6 +2843,34 @@
 
       <!-- epische titel? -->
       <div>
+        <div>
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
         <p>
           <span>oce</span>
           <span>-</span>
@@ -2936,6 +2961,25 @@
 
           <!-- de blur mixen met de oorspronkelijke vorm -->
           <!-- 				<feBlend in="SourceGraphic" in2="blob" /> -->
+        </filter>
+      </defs>
+    </svg>
+
+    <svg>
+      <defs>
+        <filter id="blobby_2">
+          <!-- eerst een grote blur -->
+          <feGaussianBlur in="SourceGraphic" stdDeviation="13" />
+
+          <!-- dan 'contrast' van alpha channel vergroten -->
+          <feColorMatrix
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+            result="blob"
+          />
+
+          <!-- de blur mixen met de oorspronkelijke vorm -->
+          <!-- <feBlend in="SourceGraphic" in2="blob" /> -->
         </filter>
       </defs>
     </svg>

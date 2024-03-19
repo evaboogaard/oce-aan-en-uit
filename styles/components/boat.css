@@ -17,13 +17,13 @@ main > div:nth-of-type(2) {
     transform: translateY(-6rem);
     padding: 0.5rem;
     resize: horizontal;
-    min-width: 12.5rem;
+    min-width: 11.5rem;
+    max-width: 34rem;
     height: 15rem;
     container: boat / inline-size;
 
     /* bootje */
     > div:first-of-type {
-      /* z-index: 100; */
       position: relative;
       background-image: linear-gradient(
           60deg in okLCH,
@@ -215,14 +215,6 @@ main > div:nth-of-type(2) {
     r:first-of-type,
     r:last-of-type {
       display: block;
-    }
-  }
-}
-
-@container boat (min-width: 34rem) {
-  main > div:nth-of-type(2) > div {
-    > div:first-of-type {
-      --boat-primary-color: red;
     }
   }
 }

@@ -161,6 +161,9 @@ titel = echt een tragedie.
 - https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
 - https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
 - https://css-tricks.com/the-shapes-of-css/
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex?retiredLocale=nl
+- https://stackoverflow.com/questions/42981485/proper-accessibility-or-aria-role-for-a-resize-handle
+- https://stackoverflow.com/questions/23027649/set-background-image-to-cover-according-to-viewport-size
 
 ## to do
 

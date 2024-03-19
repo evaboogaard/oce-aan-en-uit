@@ -271,8 +271,8 @@ main > div:first-of-type {
       15vw 14vh var(--rain-color),
       10vw 10vh var(--rain-color);
 
-    filter: drop-shadow(5vw 5vh 0 var(--rain-color))
-      drop-shadow(-6vw -10vh 0 var(--rain-color));
+    filter: drop-shadow(5vw 5vh 0.05rem var(--rain-color))
+      drop-shadow(-6vw -10vh 0.03rem var(--rain-color));
     animation: regenen 2s infinite linear paused;
 
     @media (prefers-reduced-motion: no-preference) {
@@ -302,8 +302,9 @@ main > div:first-of-type {
       17vw 19vh var(--rain-color),
       13vw 15vh var(--rain-color);
 
-    filter: brightness(0.8) blur(0.5px) drop-shadow(5vw 5vh 0 var(--rain-color))
-      drop-shadow(-6vw -10vh 0 var(--rain-color));
+    filter: brightness(0.8) blur(0.5px)
+      drop-shadow(5vw 5vh 0.025rem var(--rain-color))
+      drop-shadow(-6vw -10vh 0.05rem var(--rain-color));
     animation: regenen 2s infinite -3s linear paused;
 
     @media (prefers-reduced-motion: no-preference) {

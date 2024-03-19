@@ -183,3 +183,51 @@ s {
       92vw 47vh var(--snow-color);
   }
 }
+
+body:has(input[value='regen']:focus) label:has(input[value='regen']),
+body:has(input[value='bliksem']:focus) label:has(input[value='bliksem']),
+body:has(input[value='ijskoud']:focus) label:has(input[value='ijskoud']),
+body:has(input[value='zonnig']:focus) label:has(input[value='zonnig']),
+body:has(input[value='open-en-dicht']:focus)
+  label:has(input[value='open-en-dicht']) {
+  box-shadow: 0 0 0.25rem var(--sun-color);
+  filter: drop-shadow(0 0 0.25rem var(--sun-color));
+}
+
+body:has(input[value='regen']:focus) label:has(input[value='regen']),
+body:has(input[value='bliksem']:focus) label:has(input[value='bliksem']) {
+  > div {
+    @media (prefers-reduced-motion: no-preference) {
+      animation-play-state: running;
+    }
+  }
+}
+body:has(input[value='ijskoud']:focus) label:has(input[value='ijskoud']) {
+  div span {
+    animation: sneeuwvlokje 2s infinite linear alternate;
+
+    &::before {
+      animation: sneeuwvlokje 1.5s infinite linear alternate;
+    }
+
+    &::after {
+      animation: sneeuwvlokje 0.5s infinite linear alternate;
+    }
+  }
+}
+
+body:has(input[value='zonnig']:focus) label:has(input[value='zonnig']) {
+  @media (prefers-reduced-motion: no-preference) {
+    > span {
+      --zon-animatie-properties: 1s infinite alternate ease-in-out;
+
+      &::before {
+        animation: zonnetje-inner-pulse var(--zon-animatie-properties);
+      }
+
+      &::after {
+        animation: zonnetje-outer-pulse var(--zon-animatie-properties);
+      }
+    }
+  }
+}
