@@ -1,6 +1,6 @@
 # oce-aan-en-uit
 
-welkom bij dit project voor het vak CSS to the rescue.
+welkom bij dit project voor het vak CSS to the rescue. ik heb ervoor gekozen om een control panel te bouwen om het weer te veranderen ☀️
 
 ## workshops
 
@@ -20,7 +20,7 @@ ik heb mijn best gedaan om zo nu en dan een workshopje bij te wonen, dit is wat 
 ![](./img/process/wrkshps/12.png)
 ![](./img/process/wrkshps/13.png)
 
-## proces
+## proces + screenshots
 
 ### week 1
 
@@ -117,6 +117,64 @@ titel = echt een tragedie.
 ![](./img/process/w4/titel-1.png)
 ![](./img/process/w4/titel-2.png)
 
+## eindresultaat
+
+het is klaar, maar niet omdat ik vind dat het klaar is maar omdat het vak is afgelopen. ja ach. is niet anders. dit zijn de screenshots.
+![](./img/process/endresult/1.png)
+![](./img/process/endresult/2.png)
+![](./img/process/endresult/3.png)
+![](./img/process/endresult/4.png)
+![](./img/process/endresult/5.png)
+![](./img/process/endresult/6.png)
+![](./img/process/endresult/7.png)
+
+### waar ik trots op ben:
+
+- dat alles gemaakt is van pure CSS, behalve de svg's maar dat was niet uit luiheid maar gewoon een gebrek aan tijd (en daar heb ik uiteindelijk vet veel van geleerd, ik had nooit eerder met svg's gewerkt)
+- de blobs bij het titelscherm, ook al stijgt mijn laptop ervan op
+- container query bootje is leuk
+- de sneeuwpop met flubber armpjes
+- de gradients voor de zee en de lucht, ook al heb ik het idee gejat, ik vind vooral de freezing state erg esthetisch.
+
+### wat ik nog zou doen als deze opdracht nog een week zou duren:
+
+- code netter maken. ik kan het gewoon niet in 1 keer netjes schrijven. het is te veel en ik ben te chaotisch.
+- piratenschip
+- iets van een anker of een zeemijn die on scroll een vis vermoordt
+- de wolken mooier maken
+- meer functionaliteiten? het zou ook wel echt cool zijn om bijv de zon van positie te kunnen veranderen met een slider en dat de lucht dan ook dynamisch meeverandert qua positie en kleur.
+- marsmannetje
+- betere responsiveness, als je nu op klein scherm kijkt verspringt het een en ander.
+- mooiere vis animaties, ik heb er nu maar 2 geanimeerd omdat het echt een pain in the ass was
+
+### wat ik geleerd heb
+
+(als je concreet wil weten wat ik heb geleerd dan moet je maar naar de workshop screenshots kijken.)
+
+ik vond vooral de talks van julia en vasilis heel inspirerend. zij is echt een meester van haar medium geworden, ik had nooit gedacht dat je op die manier kon animeren met css. ik vond het echt een eer dat zij kwam spreken bij ons. dankzij haar heb ik nu een sneeuwman met flubber armpjes.
+
+vasilis maakte mij gewoon erg blij met zijn useless design praktijken. om maar gewoon ergens mee te beginnen en te zien waar het schip strandt, zoals een onleesbare abstracte css klok die hij dan ook op de een of andere manier in zijn huis weet op te hangen als fysiek werk. ik snap heel goed dat hij daar gelukkig van wordt. het is zo weird maar zo goed. hij is de meester van 'trust the process', waar ik nog veel van kan/wil leren.
+
+ik maak zelf al onzinnige kunstdingetjes sinds ik een kwast kon vasthouden, maar ben onbewust altijd op zoek geweest naar een medium dat me echt op een andere manier aansprak. toen ik net begon met coderen zag ik de 'beperkingen' van css t.o.v. andere digital design tools ook echt als zeer frustrerende beperking, maar ik heb dat wel anders leren zien. dat het juist heel leuk is om te puzzelen met hoe ver je out of the box kan denken met css, en dat die beperkingen gewoon de kaders van je canvas zijn.
+
+en voor de hoge heren van cmd amsterdam: vervang inleiding programmeren met spelen met css! zonder dat vak had ik hier nooit een passie voor gekregen. en het is niet eens een verplicht vak. dat is heel erg dom en stom.
+
+nou, dat was het!!!
+
+groet
+
+eva
+
+Week 4 - Completion
+
+- Discuss your final result (text, code and pictures).
+- What went smoothly, what was challenging, and what are you
+  most proud of?
+- What experiments did you conduct that 'failed'?
+- Do you have new insights into how to leverage the power of CSS
+  (or not)?
+- What do you want to explore further?
+
 ## bronnenlijst
 
 - https://www.w3schools.com/tags/att_form_action.asp
@@ -168,14 +226,14 @@ titel = echt een tragedie.
 ## to do
 
 - kijken naar linear timing function bramus developer.chrome, linear() generator. bouncy stuff. don't know if needed.
-  ✅ - animation-composition cool? animaties combineren?
-  ✅ - kleuren omzetten naar hsl, ff vragen hoe en wat
-  ✅ - illustraties maken voor de dieren: 3 kleine visjes, 2 mid visjes, een schildpad, 2 diepzee vissen (met lampje!!!) en een zeester en een plankton.
+- animation-composition cool? animaties combineren?
+- kleuren omzetten naar hsl, ff vragen hoe en wat
+- illustraties maken voor de dieren: 3 kleine visjes, 2 mid visjes, een schildpad, 2 diepzee vissen (met lampje!!!) en een zeester en een plankton.
 - scrolldriven: een anker dat naar beneden zakt, een vis die er door geraakt wordt???? (oke ook anker designen dan want dat ga je nu echt ff niet in css doen maatje)
-- een zeemijn???? explosies?!??!?!?!?!!!????!!!!
+  een zeemijn???? explosies?!??!?!?!?!!!????!!!!
 - ijs knop maken, ik weet echt niet wat voor design
-- alien mannetje, astronautje, tikkertje-spelend?
-  ✅ - marine snow maken
-  ✅ - zonnig: brouwers pilsie en zonnebril? of zonnig base state?
+- alien mannetje, astronautje, sneeuwpop ofzo??
+- marine snow maken
+- zonnig: brouwers pilsie en zonnebril? of zonnig base state?
 - css relative color syntax
 - de wolken zijn echt lelijk. do better

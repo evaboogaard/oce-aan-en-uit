@@ -18,7 +18,7 @@ body:has(form > div > fieldset input:checked) form > div > fieldset {
 
 @media (min-width: 800px) {
   body:has(form > div > fieldset input:checked) form > div > fieldset {
-    transform: translateY(55vh);
+    transform: translateY(10rem);
 
     label {
       transform: rotate(180deg);
