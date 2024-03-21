@@ -165,16 +165,6 @@ groet
 
 eva
 
-Week 4 - Completion
-
-- Discuss your final result (text, code and pictures).
-- What went smoothly, what was challenging, and what are you
-  most proud of?
-- What experiments did you conduct that 'failed'?
-- Do you have new insights into how to leverage the power of CSS
-  (or not)?
-- What do you want to explore further?
-
 ## bronnenlijst
 
 - https://www.w3schools.com/tags/att_form_action.asp
