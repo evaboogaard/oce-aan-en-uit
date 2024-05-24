@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
 
 main > div:last-of-type {
   width: 100vw;
@@ -32,6 +32,9 @@ main > div:last-of-type {
     font-size: 2rem;
     animation: hollywood 10s forwards ease-out;
     transform: translateZ(1rem);
+    text-shadow:
+      0.5rem 0.5rem 0.5rem var(--ocean-color-dark),
+      -0.5rem -0.5rem 0.5rem var(--ocean-color-dark);
 
     @media (min-width: 800px) {
       font-size: 3rem;
@@ -197,4 +200,4 @@ main > div:last-of-type {
       }
     }
   }
-}
+} */
